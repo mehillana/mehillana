@@ -1,79 +1,60 @@
 # Perfil d'Etienne González Zárate
 
 <div align="center">
-  <img src="https://github.com" alt="Foto de perfil de mehillana" width="130" style="border-radius: 50%; border: 3px solid #8A2BE2;"/>
+  <img src="https://github.com" alt="Perfil mehillana" width="130" style="border-radius: 50%; border: 3px solid #8A2BE2;"/>
 </div>
 
 <div align="center">
   <img src="https://shields.io" alt="Identitat"/>
-  <img src="https://shields.io" alt="Ubicació"/>
+  <img src="https://shields.io" alt="Territori"/>
   <img src="https://shields.io" alt="Llengua"/>
-  <img src="https://shields.io" alt="Llicència"/>
 </div>
 
 ---
 
-## 📌 Declaració del perfil
+## Especificacions de Desplegament
 
-Soc l'Etienne González Zárate, desenvolupador de programari resident a Sant Cugat del Vallès. Com a persona no binària, concebo la programació com una eina d'expressió lògica, neta i orientada a la comunitat. Aquest repositori centralitza la meva activitat digital i connecta els meus interessos amb els codis públics desplegats a la xarxa.
+Els projectes centrals i les seves corresponents pàgines web estan publicats sota els dominis següents:
+
+* **Santisidre:** [mehillana.github.io/santisidre](https://github.io)
+* **Lavender:** [mehillana.github.io/lavender](https://github.io)
 
 ---
 
-## 💻 Resum de Repositoris Actius
+## Vectors de Coneixement i Interessos Culturals
 
-| Repositori | Tipus d'Arquitectura / Propòsit | Estat del Codi |
+* **Geografia:** Cartografia analítica i organització territorial.
+* **Història:** Documentació de cronologies i evolució social.
+* **Música:** Anàlisi de pistes i audició activa.
+* **Llengua:** Ús i promoció del català com a llengua de programació.
+
+---
+
+## Preferències Gastronòmiques
+
+| Categoria | Descripció del Plat | Estil / Fusió |
 | :--- | :--- | :--- |
-| **[santisidre](https://github.com)** | Component o aplicació niada de l'ecosistema de mòduls locals. | `Stable` |
-| **[lavender](https://github.com)** | Disseny d'interfície web, paletes visuals i estètica de sistemes. | `Active` |
-| **[espaimemoria](https://github.com/mehillana/espaimemoria)** | Refugi digital privat de codi obert per a la gestió emocional del dol. | `Production` |
-| **[nyambook](https://github.com)** | Gestor estructurat d'alta qualitat per a biblioteques de receptes. | `Archived` |
+| **Sushi** | Especialitats de la cuina japonesa | Tradicional |
+| **Iuca Fregida** | Preparació cruixent d'arrels | Tradicional |
+| **Menjar Chifa** | Fusió de cuina xinesa i peruana | Fusió |
 
 ---
 
-## 📚 Interessos i Habilitats Culturals
-
-### Vectors de Coneixement
-* **Geografia:** Cartografia analítica, organització territorial i dades de posicionament global.
-* **Història:** Documentació de fets passats, evolució dels registres i estructures socials.
-* **Música:** Exploració harmònica, anàlisi de pistes i audició activa.
-
-### Afinitats Culinàries
-```yaml
-gastronomia:
-  - tipus: "Sushi"
-    origen: "Japó"
-  - tipus: "Iuca fregida"
-    estil: "Cruixent tradicional"
-  - tipus: "Menjar Chifa"
-    fusió: "Peruana-xinesa"
-```
-
----
-
-## 🛠️ Stack de Desenvolupament
-
-```web-development
-[Frontend]  =========================> HTML5 / CSS3 (Temes Lavender) / JavaScript
-[Eines]     =========================> Git / GitHub Actions / Visual Studio Code
-[Projectes] =========================> Eines de programari lliure i dades locals
-```
-
----
-
-## 📊 Mètrics d'Estil del Sistema
+## Mètrics d'Estil del Sistema
 
 ```diff
-+ Arquitectura: Dissenyada en català
-# Paleta de color: Dominant Lavender / Violeta
-- Dependències exteriors: Zero (Enfocament privacitat local)
++ Identitat: Persona no binària
+# Paleta Gràfica: Dominant Lavender / Violeta
+- Entorn Territorial: Sant Cugat del Vallès
 ```
 
 ---
 
-## 📇 Nodes de Verificació
+## Terminal de Verificació
 
 ```bash
-\$ identity-check --user "mehillana"
-> Codi indexat correctament.
-> Registre associat a: Etienne González Zárate
+\$ core-profile --check-identity mehillana
+> Estat: Actiu
+> Desenvolupador/a: Etienne González Zárate
+> Nodes detectats: santisidre | lavender
 ```
