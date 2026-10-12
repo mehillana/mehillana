@@ -1,78 +1,83 @@
 # Etienne González Zárate
 
 <div align="center">
-  <img src="https://github.com/mehillana.png" alt="Perfil mehillana" width="130" style="border-radius: 50%; border: 3px solid #8A2BE2;"/>
+  <img src="https://github.com/mehillana.png" alt="Perfil mehillana" width="140" style="border-radius: 50%; border: 3px solid #8A2BE2;"/>
 </div>
 
 <div align="center">
   
-![Identitat](https://img.shields.io/badge/Identitat-No_binària-9370db)
-![Territori](https://img.shields.io/badge/Territori-Sant_Cugat_del_Vallès-9370db)
-![Llengua](https://img.shields.io/badge/Llengua-Català-9370db)
+![Identitat](https://img.shields.io/badge/Identitat-No_bin%C3%A0ria-8A2BE2)
+![Territori](https://img.shields.io/badge/Territori-Sant_Cugat_del_Vall%C3%A8s-8A2BE2)
+![Llengua](https://img.shields.io/badge/Llengua-Catal%C3%A0-8A2BE2)
+![Perfil](https://img.shields.io/badge/Perfil-Actiu-9370DB)
 
 </div>
 
 ---
 
-## 📍 Projectes Principals
+## Presentació
 
-Els meus dos projectes més importants estan disponibles en aquestes ubicacions:
+Soc Etienne González Zárate, una persona amb una forta identitat creativa, cultural i territorial. El meu perfil combina tecnologia, geografia, música, història i llengua, i la paleta lavanda i violeta hi té un paper central com a expressió visual i emocional del meu món.
 
-### **Lavender** ![Status](https://img.shields.io/badge/Status-Actiu-purple)
-Lavender és un projecte dedicat a l'exploració de la identitat digital i la creativitat visual. Es tracta d'una col·lecció de recursos, documentació i experiments que es despleguen a través de [mehillana.github.io/lavender](https://mehillana.github.io/lavender). Aquest projecte es caracteritza per una paleta de colors que abraça la violeta com a color dominant, reflectint l'estètica i l'essència del meu perfil. Inclou diverses iniciatives relacionades amb el disseny, la documentació i la exploració de tecnologies web modernes.
-
-### **Santisidre** ![Status](https://img.shields.io/badge/Status-Actiu-purple)
-Santisidre és un projecte de cartografia i documentació territorial que es desplegava a [mehillana.github.io/santisidre](https://mehillana.github.io/santisidre). Es centra en l'anàlisi geogràfica, l'organització territorial i la representació de dades cartogràfiques. Aquest projecte combina la meva passió per la geografia analítica amb les eines de visualització web modernes, creant una plataforma educativa i interactiva per a l'exploració de territorialitat.
+La meva manera de crear es basa en la relació entre identitat, territori i coneixement. En aquest espai es recullen els projectes més significatius del meu treball: Lavender i Santisidre, dos eixos que reflecteixen la meva manera de pensar i d’expressar-me.
 
 ---
 
-## 🎓 Vectors de Coneixement
+## Projectes principals
 
-Els meus principals interessos culturals i àrees de desenvolupament es distribueixen en diverses disciplines:
+### Lavender ![Status](https://img.shields.io/badge/Project-Lavender-8A2BE2)
 
-**Geografia i Territori** — La meva fascinació per la cartografia analítica i l'organització territorial es reflecteix en projectes com Santisidre. Crec que la comprensió de l'espai geogràfic és fonamental per a la cultura contemporània.
+Lavender és un projecte dedicat a l’exploració de la identitat digital i la creativitat visual. Es tracta d’una iniciativa centrada en recursos, documentació i experiments amb un fort component estètic, on la paleta lavanda i el violeta representen la personalitat de la proposta. La idea és crear un espai d’expressió coherent amb la meva sensibilitat i amb la forma en què connecto la tecnologia amb la identitat i la creativitat.
 
-**Història i Cronologia** — La documentació sistemàtica de les evolucions socials i les cronologies històriques m'interessa profundament. Busco crear registres significatius que connectin el passat amb el present.
+El projecte es desplega a [mehillana.github.io/lavender](https://mehillana.github.io/lavender), on la visualitat i la narrativa dels continguts es transformen en una experiencia digital clara i plena de matisos.
 
-**Música i Audició Activa** — L'anàlisi de pistes, les microtonalitats i l'escolta conscient són part essencial del meu desenvolupament personal. La música és un llenguatge universal que transcendeix les fronteres culturals.
+### Santisidre ![Status](https://img.shields.io/badge/Project-Santisidre-7B68EE)
 
-**Llengua i Programació en Català** — Soc un defenssor de l'ús del català com a llengua de programació. Crec que el codi pot i ha de ser escrit en les llengües que ens són pròpies, promovent la diversitat lingüística en el desenvolupament tecnològic.
+Santisidre és un projecte de caràcter territorial i cartogràfic, vinculat a l’anàlisi geogràfica i a la documentació dels espais com a elements de cultura i identitat. La meva passió per la geografia i l’organització territorial es materialitza aquí mitjançant una mirada analítica i visual sobre el territori.
 
----
-
-## 🍱 Preferències Gastronòmiques
-
-La cuina és una altra expressió de la cultura i la identitat. Les meves preferències gastronòmiques inclouen:
-
-**Sushi** — Les especialitats de la cuina japonesa em captiven per la seva precisió, elegància i profunditat de sabors. La tradició i el detall són essencials en cada peça.
-
-**Yuca Fregida** — La preparació cruixent d'arrels és un element clàssic que remarca la riquesa de les cuines tradicionals. Una delícia simple però satisfactòria.
-
-**Menjar Chifa** — La fusió de la cuina xinesa i peruana representa la força de combinar traditions culináries. El chifa és l'exemple perfecte de com dues cultures poden crear quelcom completament nou.
+Aquest projecte es publica a [mehillana.github.io/santisidre](https://mehillana.github.io/santisidre), i busca connectar la informació territorial amb eines modernes de presentació, visualització i exploració digital.
 
 ---
 
-## 🎨 Sistema de Identitat
+## Vectors de coneixement i interessos culturals
 
-La meva identitat es caracteritza per uns elements claus que m'defineixen:
-
-**Expressió de Gènere** — Soc una persona no binària. La meva identitat transcendeix les categories tradicionals de gènere, i busco espais on la diversitat identitària sigui respectada i valorada.
-
-**Paleta Visual** — Lavender i violeta dominan la meva estètica. Aquests colors representan creativitat, transformació i una certa sensibilitat artística que és central en la meva percepció del món.
-
-**Ubicació Territorial** — Sant Cugat del Vallès és la meva base territorial. Aquesta localitat de la comarca del Vallès Occidental és part integral de la meva identitat local i cultural.
+- Geografia i territori: cartografia analítica, comprensió de l’espai i organització territorial.
+- Història i cronologia: documentació de processos socials, evolucions culturals i connexió entre passat i present.
+- Música i audició activa: anàlisi de pistes, escolta conscient i relació entre art i sensibilitat.
+- Llengua i programació en català: defensa de l’ús del català com a llengua de desenvolupament i creació digital.
 
 ---
 
-## ⚙️ Estat del Perfil
+## Preferències gastronòmiques
 
-Tots els meus projectes es mantenen en un estat actiu i continu. Els nodes principals del sistema (Santisidre i Lavender) continuen evolucionant, integrando noves funcionalitats i explorant nous horitzons tecnològics. La comunitat global és convidada a explorar, col·laborar i contribuir a aquests projectes.
+- Sushi: precisió, elegància i profunditat de sabors.
+- Yuca fregida: tradició, textura i sabor clàssic.
+- Menjar chifa: fusió cultural, creativitat i riquesa de combinacions.
+
+La cuina, com la tecnologia, és una expressió de cultura, identitat i connexió.
+
+---
+
+## Identitat i estil
+
+- Expressió de gènere: persona no binària.
+- Paleta visual: dominant lavanda i violeta.
+- Base territorial: Sant Cugat del Vallès.
+
+Aquests elements configuren la meva identitat i la manera en què interpreto el món: amb sensibilitat, creativitat i un fort vincle amb el territori i la cultura.
+
+---
+
+## Estat del perfil
+
+El meu perfil es manté actiu i en constant evolució. Els projectes principals, Lavender i Santisidre, representen els dos punts centrals del meu treball i de la meva forma de crear. La idea és seguir explorant noves dimensions, reforçant lligams entre tecnologia, cultura i identitat, i ampliant les possibilitats del coneixement a través del digital.
 
 ---
 
 <div align="center">
 
-![Profile Views](https://img.shields.io/badge/profile_views-welcome-9370db)
-![Last Update](https://img.shields.io/badge/last_update-2026-9370db)
+![Profile Views](https://img.shields.io/badge/Profile_views-Welcome-8A2BE2)
+![Last Update](https://img.shields.io/badge/Last_update-2026-9370DB)
+![GitHub](https://img.shields.io/badge/GitHub-mehillana-8A2BE2)
 
 </div>
