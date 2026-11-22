@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧩 Etienne González Zárate
+# Etienne González Zárate
 
 ### Programari, llengua i imaginació
 
