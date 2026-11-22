@@ -91,13 +91,11 @@ Chaufa √©s un projecte propi relacionat amb la gastronomia i la cultura de fusi√
 <img src="mehillana-mapa-digital.png" alt="" width="48%" />
 <img src="mehillana-lavender-farmia.png" alt="" width="48%" />
 
-
 <img src="mehillana-taula-fusio.png" alt="" width="48%" />
 <img src="mehillana-historia-musica.png" alt="" width="48%" />
 
-
 <img src="mehillana-cosmos-catala.png" alt="" width="70%" />
-
+<img src="eichi-x-mona.png" alt="" width="70%" />
 
 </div>
 
