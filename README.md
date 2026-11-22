@@ -23,9 +23,9 @@
 
 ## ✦ Benvingut/da al meu espai
 
-Soc **Etienne González Zárate** —a GitHub, **[@mehillana](https://github.com/mehillana)**—, desenvolupador de programari a Sant Cugat del Vallès. Aquest perfil recull el meu treball, els meus experiments i les creacions que vaig fent en diferents universos.
+Soc **Etienne González Zárate** —a GitHub, **[@mehillana](https://github.com/mehillana)**—, desenvolupador de programari a Sant Cugat del Vallès. Aquest perfil recull el meu treball, els meus interessos i les idees que em mouen.
 
-Em mou la tecnologia amb context: eines útils, accessibles i respectuoses amb les persones, juntament amb projectes que construeixen mons propis i proposen una manera diferent de mirar. La meva paleta tendeix als tons lavanda i violeta i els meus interessos passen per la llengua, la història, la geografia, la música i la gastronomia de fusió.
+Em mou la tecnologia amb context: eines útils, accessibles i respectuoses amb les persones, juntament amb projectes que construeixen mons propis i proposen una manera diferent de mirar.
 
 <div align="center">
 
@@ -47,7 +47,7 @@ Em mou la tecnologia amb context: eines útils, accessibles i respectuoses amb l
 
 **[Obre Lavender ↗](https://mehillana.github.io/lavender)** · **[Repositori ↗](https://github.com/mehillana/lavender)**
 
-Lavender transforma frases escrites en esdeveniments, celebracions i tasques de diversos dies. Ofereix vistes diària, setmanal, mensual, anual i d’agenda, notes dins dels esdeveniments, calendaris per persona, repeticions, recordatoris i temes personalitzats.
+Lavender transforma frases escrites en esdeveniments, celebracions i tasques de diversos dies. Ofereix vistes diària, setmanal, mensual, anual i d’agenda, notes dins dels esdeveniments, calendari lunar i reptes familiars. Tot funciona sense compte i sense enviament de dades a tercers.
 
 - 🗣️ Entrada en llenguatge natural.
 - 🗓️ Diferents maneres de consultar i planificar el temps.
@@ -64,7 +64,7 @@ Lavender transforma frases escrites en esdeveniments, celebracions i tasques de 
 
 **[Juga a Farmia ↗](https://mehillana.github.io/farmia)** · **[Repositori ↗](https://github.com/mehillana/farmia)**
 
-Farmia és un videojoc de gestió per al navegador ambientat en un poble de muntanya. La persona jugadora cuida un hort, gestiona recursos i veïns, comercialitza al mercat i decideix quines ofrenes fer a la Dama del cim.
+Farmia és un videojoc de gestió per al navegador ambientat en un poble de muntanya. La persona jugadora cuida un hort, gestiona recursos i veïns, comercialitza al mercat i decideix quines ofrenes fa a una criatura misteriosa que habita la boscosa masia propera.
 
 - 🏔️ Paisatge muntanyós i exploració amb càmera 3D.
 - 🌱 Cultiu, aigua, collita i provisions per a l’hivern.
@@ -105,11 +105,11 @@ Chaufa és un projecte propi relacionat amb la gastronomia i la cultura de fusi�
 
 ### Tecnologia amb context
 
-El programari no viu en el buit. Les llengües en què es crea, les persones a qui serveix i els llocs des d’on s’imagina formen part del projecte. M’interessa una tecnologia situada i pensada per a usos reals.
+El programari no viu en el buit. Les llengües en què es crea, les persones a qui serveix i els llocs des d’on s’imagina formen part del projecte. M’interessa una tecnologia situada i pensada per a persones concretes.
 
 ### Privacitat com a gest de respecte
 
-Lavender parteix de la idea que una eina personal no ha de requerir un compte ni convertir l’activitat de qui la fa servir en dades comercials. La privacitat és una manera de tractar les persones amb respecte.
+Lavender parteix de la idea que una eina personal no ha de requerir un compte ni convertir l’activitat de qui la fa servir en dades comercials. La privacitat és una manera de tractar les persones amb atenció.
 
 ### Llengua com a espai de creació
 
@@ -117,7 +117,7 @@ Crear programari en català amplia els espais on aquesta llengua pot ser una lle
 
 ### Joc, relat i experimentació
 
-No tots els projectes han de resoldre el mateix problema. Alguns poden explorar una idea, construir un món o fer-nos mirar un costum des d’un altre angle. Farmia combina aquests interessos amb gestió i misteri.
+No tots els projectes han de resoldre el mateix problema. Alguns poden explorar una idea, construir un món o fer-nos mirar un costum des d’un altre angle. Farmia combina aquests interessos amb la lògica d’un joc senzill i evocador.
 
 <div align="center">
 
@@ -159,9 +159,19 @@ No són compartiments separats, sinó punts que sovint es connecten entre si:
 
 ## 🍣 Cultura també és taula
 
-La gastronomia és una altra manera d’explicar el món: tècniques, ingredients i històries que viatgen i es transformen. Entre els meus gustos hi ha el **sushi**, la **yuca fregida** i la **cuina xinesa de fusió**.
+La gastronomia és una altra manera d’explicar el món: tècniques, ingredients i històries que viatgen i es transformen. Entre els meus gustos hi ha el **sushi**, la **yuca fregida** i la **carxofa a la planxa**.
 
 M’agrada pensar que passa una cosa semblant amb els projectes: les idees més interessants sovint apareixen quan disciplines, llocs i sensibilitats diferents comparteixen espai.
+
+---
+
+## 🕓 Temps a GitHub
+
+<div align="center">
+
+<img src="4mesos.png" alt="Temps a GitHub: quatre mesos" width="70%" />
+
+</div>
 
 ---
 
