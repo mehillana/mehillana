@@ -13,7 +13,7 @@
 ![Identitat](https://img.shields.io/badge/IDENTITAT-NO_BIN%C3%80RIA-C084FC?style=for-the-badge&labelColor=1F1633)
 ![Cultura](https://img.shields.io/badge/MIRADA-CULTURAL-DB2777?style=for-the-badge&labelColor=1F1633)
 
-[PROJECTES](#-projectes) · [DIBUIXOS](#-dibuixos-propis) · [INTERESSOS](#-constel·lació-dinteressos) · [EXPLORA](#-explora)
+[PROJECTES](#-projectes) · [IL·LUSTRACIONS](#-il·lustracions-personals) · [INTERESSOS](#-constel·lació-dinteressos) · [EXPLORA](#-explora)
 
 </div>
 
@@ -51,7 +51,7 @@ Lavender transforma frases escrites en esdeveniments, celebracions i tasques de 
 
 - 🗣️ Entrada en llenguatge natural.
 - 🗓️ Diferents maneres de consultar i planificar el temps.
-- 🌙 Seasons, fases lunars i reptes.
+- 🌙 Estacions, fases lunars i reptes.
 - 🔒 Sense compte ni seguiment: les dades romanen al navegador.
 - 🌱 Codi obert i disponible com a aplicació web.
 
@@ -64,7 +64,7 @@ Lavender transforma frases escrites en esdeveniments, celebracions i tasques de 
 
 **[Juga a Farmia ↗](https://mehillana.github.io/farmia)** · **[Repositori ↗](https://github.com/mehillana/farmia)**
 
-Farmia és un videojoc de gestió per al navegador ambientat en un poble de muntanya. La persona jugadora cuida un hort, gestiona recursos i veïns, comercialitza al mercat i pren decisions sobre les ofrenes que li cal fer a la Dama del cim.
+Farmia és un videojoc de gestió per al navegador ambientat en un poble de muntanya. La persona jugadora cuida un hort, gestiona recursos i veïns, comercialitza al mercat i decideix quines ofrenes fer a la Dama del cim.
 
 - 🏔️ Paisatge muntanyós i exploració amb càmera 3D.
 - 🌱 Cultiu, aigua, collita i provisions per a l’hivern.
@@ -80,36 +80,33 @@ Farmia és un videojoc de gestió per al navegador ambientat en un poble de munt
 
 **[Repositori ↗](https://github.com/mehillana/chaufa)**
 
-Chaufa és un projecte propi relacionat amb la gastronomia i la cultura de fusió. El repositori encara no té una pàgina pública ni una pàgina web associada.
+Chaufa és un projecte propi relacionat amb la gastronomia i la cultura de fusió. El repositori encara no té pàgina pública.
 
 ---
 
-## ✍️ Dibuixos propis
+## ✍️ Il·lustracions personals
 
-Aquesta secció reserva espais per incorporar dibuixos meus amb el seu propi nom i una imatge.
+Il·lustracions pròpies en què aparec amb els meus projectes, els meus interessos i les coses que m’agraden. Pujar-les a l’arrel del repositori amb els noms indicats farà que apareguin directament aquí.
 
-### `Dibuix 01 — [Títol per decidir]`
+<div align="center">
 
-<!--
-Per afegir-lo:
-1. Posa la imatge a una carpeta com `dibuixos/`.
-2. Substitueix `dibuixos/nom-del-fitxer.png` i el text entre claudàtors.
+<img src="mehillana-mapa-digital.png" alt="Mehillana amb mapes i tecnologia" width="48%" />
+<img src="mehillana-lavender-farmia.png" alt="Mehillana amb Lavender i Farmia" width="48%" />
 
-![Títol del dibuix](dibuixos/nom-del-fitxer.png)
-*Descripció o data del dibuix.*
--->
+*Mapa digital* · *Lavender i Farmia*
 
-*Espai reservat. Quan em diguis el nom i em passis la imatge, podré completar aquest dibuix.*
+<img src="mehillana-taula-fusio.png" alt="Mehillana a una taula de cuina de fusió" width="48%" />
+<img src="mehillana-historia-musica.png" alt="Mehillana rodejada d’història i música" width="48%" />
 
-### `Dibuix 02 — [Títol per decidir]`
+*Taula de fusió* · *Història i música*
 
-*Espai reservat. Quan em diguis el nom i em passis la imatge, podré completar aquest dibuix.*
+<img src="mehillana-cosmos-catala.png" alt="Mehillana dins una constel·lació catalana" width="70%" />
 
-### `Dibuix 03 — [Títol per decidir]`
+*Cosmos català*
 
-*Espai reservat. Quan em diguis el nom i em passis la imatge, podré completar aquest dibuix.*
+</div>
 
-> També pots anomenar-los de manera evocadora, per exemple: **Matinada violeta**, **Mapa d’un poble imaginari**, **Flors per a la Dama**, **Territori lunar** o **Retrat sense cara**.
+> Els fitxers esperats són: `mehillana-mapa-digital.png`, `mehillana-lavender-farmia.png`, `mehillana-taula-fusio.png`, `mehillana-historia-musica.png` i `mehillana-cosmos-catala.png`.
 
 ---
 
@@ -147,7 +144,7 @@ No són compartiments separats, sinó punts que sovint es connecten entre si:
 
 - **Llengua i tecnologia** — català en productes digitals, llenguatge natural i eines que parlen com les persones.
 - **Geografia i territori** — mapes, paisatges i les maneres com organitzem i expliquem l’espai.
-- **Història i cronologia** — memòries, processos socials i fils que uneixen el passat amb el present.
+- **Història i cronologia** — memòries, processos socials i fils que uneixen el passat i el present.
 - **Música i escolta** — atenció al detall i la relació entre so, emoció i context.
 - **Gastronomia i fusió** — cuines que expliquen trobades culturals, tècnica, origen i imaginació.
 - **Disseny i identitat visual** — colors i atmosferes que ajuden cada projecte a trobar la seva veu.
