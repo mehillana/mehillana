@@ -86,27 +86,20 @@ Chaufa és un projecte propi relacionat amb la gastronomia i la cultura de fusi�
 
 ## ✍️ Il·lustracions personals
 
-Il·lustracions pròpies en què aparec amb els meus projectes, els meus interessos i les coses que m’agraden. Pujar-les a l’arrel del repositori amb els noms indicats farà que apareguin directament aquí.
-
 <div align="center">
 
-<img src="mehillana-mapa-digital.png" alt="Mehillana amb mapes i tecnologia" width="48%" />
-<img src="mehillana-lavender-farmia.png" alt="Mehillana amb Lavender i Farmia" width="48%" />
+<img src="mehillana-mapa-digital.png" alt="" width="48%" />
+<img src="mehillana-lavender-farmia.png" alt="" width="48%" />
 
-*Mapa digital* · *Lavender i Farmia*
 
-<img src="mehillana-taula-fusio.png" alt="Mehillana a una taula de cuina de fusió" width="48%" />
-<img src="mehillana-historia-musica.png" alt="Mehillana rodejada d’història i música" width="48%" />
+<img src="mehillana-taula-fusio.png" alt="" width="48%" />
+<img src="mehillana-historia-musica.png" alt="" width="48%" />
 
-*Taula de fusió* · *Història i música*
 
-<img src="mehillana-cosmos-catala.png" alt="Mehillana dins una constel·lació catalana" width="70%" />
+<img src="mehillana-cosmos-catala.png" alt="" width="70%" />
 
-*Cosmos català*
 
 </div>
-
-> Els fitxers esperats són: `mehillana-mapa-digital.png`, `mehillana-lavender-farmia.png`, `mehillana-taula-fusio.png`, `mehillana-historia-musica.png` i `mehillana-cosmos-catala.png`.
 
 ---
 
