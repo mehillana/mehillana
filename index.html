@@ -1,0 +1,3767 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>/mehillana — Etienne González Zárate (@eichi)</title>
+    <meta
+      name="description"
+      content="Portfoli d'Etienne González Zárate (@eichi), desenvolupador de programari cultural, útil, en català i vinculat al territori, la geografia i la cultura."
+    />
+    <meta property="og:title" content="/mehillana — Etienne González Zárate (@eichi)" />
+    <meta
+      property="og:description"
+      content="On la passió es converteix en talent local, solucions, sobirania, codi, creativitat i ajuda. Programari cultural en català."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400..500&family=JetBrains+Mono:wght@400;500&family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #faf8f4;
+        --surface: #ffffff;
+        --surface-soft: #f3efe7;
+        --ink: #141413;
+        --ink-muted: rgba(20, 20, 19, 0.72);
+        --ink-subtle: rgba(20, 20, 19, 0.52);
+        --border: rgba(20, 20, 19, 0.12);
+        --accent-ink: #c82333;
+        --accent-vivid: #e63946;
+        --accent-tint: #fdecee;
+        --font-sans: 'Mona Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+        --font-serif: 'Fraunces', Georgia, serif;
+        --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: var(--font-sans);
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        margin: 0;
+        background-color: var(--bg);
+        color: var(--ink);
+        font-family: var(--font-sans);
+        line-height: 1.5;
+        overflow-x: hidden;
+        background-image:
+          linear-gradient(to right, rgba(20, 20, 19, 0.045) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(20, 20, 19, 0.045) 1px, transparent 1px);
+        background-size: 48px 48px;
+      }
+
+      ::selection {
+        background: var(--accent-ink);
+        color: #ffffff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: 0;
+        background: none;
+        padding: 0;
+        color: inherit;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--ink);
+        outline-offset: 2px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+      }
+
+      /* Top Bar (3-zone contract) */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(250, 248, 244, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      .brand {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .brand-slash {
+        color: var(--accent-vivid);
+        transition: color 250ms ease;
+      }
+
+      .nav-links {
+        display: none;
+        align-items: center;
+        gap: 28px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--ink-muted);
+      }
+
+      @media (min-width: 768px) {
+        .nav-links {
+          display: flex;
+        }
+      }
+
+      .nav-links a {
+        position: relative;
+        padding: 4px 0;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: color 150ms ease;
+      }
+
+      .nav-links a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: var(--ink);
+        transition: width 200ms var(--ease-out);
+      }
+
+      .nav-links a:hover {
+        color: var(--ink);
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .btn-dark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: var(--ink);
+        color: #ffffff;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 10px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease, transform 150ms ease;
+      }
+
+      .btn-dark:hover {
+        background: #2b2b29;
+      }
+
+      .btn-dark:active {
+        transform: scale(0.98);
+      }
+
+      /* Main & Hero Split */
+      main {
+        padding-top: 28px;
+        padding-bottom: 56px;
+      }
+
+      @media (min-width: 1024px) {
+        main {
+          padding-top: 40px;
+          padding-bottom: 72px;
+        }
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        align-items: stretch;
+      }
+
+      @media (min-width: 1024px) {
+        .hero-grid {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+          gap: 40px;
+        }
+        .hero-left {
+          grid-column: span 6;
+        }
+        .hero-right {
+          grid-column: span 6;
+        }
+      }
+
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .kicker {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 10px;
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--ink-muted);
+        margin-bottom: 14px;
+      }
+
+      .kicker strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .mono {
+        font-family: var(--font-mono);
+      }
+
+      .hero-title {
+        margin: 0;
+        font-size: clamp(2.3rem, 4.3vw, 3.85rem);
+        font-weight: 850;
+        line-height: 1.04;
+        letter-spacing: -0.032em;
+        text-wrap: balance;
+      }
+
+      /* Rotating Wheel Card */
+      .wheel-card {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px;
+        border-radius: 18px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        box-shadow: 0 14px 40px -18px rgba(20, 20, 19, 0.14);
+      }
+
+      @media (min-width: 640px) {
+        .wheel-card {
+          flex-direction: row;
+          align-items: center;
+          padding: 20px;
+          gap: 18px;
+        }
+      }
+
+      .dial-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-shrink: 0;
+      }
+
+      .dial-box {
+        position: relative;
+        width: 96px;
+        height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (min-width: 640px) {
+        .dial-box {
+          width: 112px;
+          height: 112px;
+        }
+      }
+
+      .dial-svg {
+        width: 100%;
+        height: 100%;
+        transition: transform 520ms var(--ease-out);
+      }
+
+      .dial-hub {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--accent-tint);
+        border: 1px solid var(--border);
+        box-shadow: 0 2px 8px rgba(20, 20, 19, 0.08);
+        transition: background-color 280ms ease;
+      }
+
+      .dial-pointer {
+        display: none;
+        position: absolute;
+        right: -6px;
+        top: 50%;
+        width: 12px;
+        height: 12px;
+        background: #ffffff;
+        border-top: 2px solid var(--accent-vivid);
+        border-right: 2px solid var(--accent-vivid);
+        transform: translateY(-50%) rotate(45deg);
+        transition: border-color 250ms ease;
+      }
+
+      @media (min-width: 640px) {
+        .dial-pointer {
+          display: block;
+        }
+      }
+
+      .wheel-drum {
+        position: relative;
+        height: 148px;
+        flex: none;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid rgba(20, 20, 19, 0.08);
+        background: var(--bg);
+        padding: 8px 14px;
+        perspective: 700px;
+      }
+
+      @media (min-width: 640px) {
+        .wheel-drum {
+          flex: 1;
+        }
+      }
+
+      .wheel-fade-top,
+      .wheel-fade-bottom {
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 36px;
+        z-index: 10;
+      }
+
+      .wheel-fade-top {
+        top: 0;
+        background: linear-gradient(to bottom, var(--bg), transparent);
+      }
+
+      .wheel-fade-bottom {
+        bottom: 0;
+        background: linear-gradient(to top, var(--bg), transparent);
+      }
+
+      .wheel-slot-highlight {
+        pointer-events: none;
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        top: 50%;
+        height: 54px;
+        transform: translateY(-50%);
+        border-radius: 10px;
+        background: var(--accent-tint);
+        border: 1px solid color-mix(in srgb, var(--accent-vivid) 30%, transparent);
+        transition: background-color 280ms ease, border-color 280ms ease;
+      }
+
+      .wheel-items {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .wheel-item {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 52px;
+        margin-top: -26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+        text-align: left;
+        transition: transform 420ms var(--ease-out), opacity 320ms ease, color 220ms ease;
+      }
+
+      .wheel-item-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        letter-spacing: -0.025em;
+      }
+
+      .wheel-item[data-offset='0'] .wheel-item-label {
+        font-size: clamp(1.55rem, 2.5vw, 2.25rem);
+        font-weight: 900;
+      }
+
+      .wheel-item:not([data-offset='0']) .wheel-item-label {
+        font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+        font-weight: 600;
+      }
+
+      .wheel-counter {
+        margin-left: 8px;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .wheel-controls-desktop {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        flex-shrink: 0;
+      }
+
+      .wheel-controls-mobile {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      @media (min-width: 640px) {
+        .wheel-controls-desktop {
+          display: flex;
+        }
+        .wheel-controls-mobile {
+          display: none;
+        }
+      }
+
+      .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        color: var(--ink);
+        transition: background-color 150ms ease, transform 150ms ease;
+      }
+
+      .wheel-controls-mobile .icon-btn {
+        width: 44px;
+        height: 44px;
+      }
+
+      .icon-btn:hover {
+        background: #ece8de;
+      }
+
+      .icon-btn:active {
+        transform: scale(0.95);
+      }
+
+      /* Descriptor + 6-segment bar */
+      .wheel-meta {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .descriptor {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 24px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: rgba(20, 20, 19, 0.82);
+      }
+
+      .descriptor-diamond {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        transform: rotate(45deg);
+        background: var(--accent-vivid);
+        transition: background-color 280ms ease;
+      }
+
+      .segment-bar {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+        padding: 4px;
+        border-radius: 14px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        width: fit-content;
+      }
+
+      .segment-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 11px;
+        border-radius: 9px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--ink-muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease, color 150ms ease;
+      }
+
+      .segment-btn:hover {
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      .segment-btn[aria-pressed='true'] {
+        color: #ffffff;
+        box-shadow: 0 2px 6px rgba(20, 20, 19, 0.14);
+      }
+
+      .segment-swatch {
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      .lead {
+        margin: 22px 0 0;
+        max-width: 36rem;
+        font-size: 1.02rem;
+        line-height: 1.62;
+        color: rgba(20, 20, 19, 0.8);
+      }
+
+      .lead strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px;
+        padding-top: 4px;
+      }
+
+      .btn-accent {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 24px;
+        border-radius: 12px;
+        background: var(--accent-ink);
+        color: #ffffff;
+        font-size: 0.875rem;
+        font-weight: 700;
+        white-space: nowrap;
+        flex-shrink: 0;
+        box-shadow: 0 6px 18px -6px rgba(20, 20, 19, 0.25);
+        transition: background-color 250ms ease, opacity 150ms ease, transform 150ms ease;
+      }
+
+      .btn-accent:hover {
+        opacity: 0.94;
+      }
+
+      .btn-accent:active {
+        transform: scale(0.98);
+      }
+
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 20px;
+        border-radius: 12px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        color: var(--ink);
+        font-size: 0.875rem;
+        font-weight: 600;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease;
+      }
+
+      .btn-outline:hover {
+        background: var(--surface-soft);
+      }
+
+      /* Right Column: Reserved Empty titol.png Frame + eichi Signature */
+      .artwork-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 360px;
+        padding: 20px;
+        border-radius: 18px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        box-shadow: 0 18px 50px -24px rgba(20, 20, 19, 0.18);
+      }
+
+      @media (min-width: 1024px) {
+        .artwork-card {
+          min-height: 460px;
+          padding: 24px;
+        }
+      }
+
+      .artwork-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 14px;
+      }
+
+      .bauhaus-triad {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .shape-circle {
+        width: 13px;
+        height: 13px;
+        border-radius: 999px;
+        background: #e63946;
+        animation: pulseScale 3.5s ease-in-out infinite;
+      }
+
+      .shape-square {
+        width: 13px;
+        height: 13px;
+        background: #2563eb;
+        animation: spinStep 6s ease-in-out infinite;
+      }
+
+      .shape-arc {
+        width: 13px;
+        height: 13px;
+        border-top-left-radius: 13px;
+        background: #f59e0b;
+      }
+
+      .shape-diamond {
+        width: 11px;
+        height: 11px;
+        background: #10b981;
+        transform: rotate(45deg);
+      }
+
+      .artwork-stage {
+        position: relative;
+        flex: 1;
+        min-height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1.5px dashed rgba(20, 20, 19, 0.18);
+        background-color: #faf7f0;
+        background-image:
+          radial-gradient(circle at 20% 25%, rgba(230, 57, 70, 0.06), transparent 45%),
+          radial-gradient(circle at 80% 75%, rgba(37, 99, 235, 0.06), transparent 45%),
+          linear-gradient(to right, rgba(20, 20, 19, 0.035) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(20, 20, 19, 0.035) 1px, transparent 1px);
+        background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+      }
+
+      .orbit-svg {
+        pointer-events: none;
+        position: absolute;
+        left: -28px;
+        top: -28px;
+        width: 112px;
+        height: 112px;
+        z-index: 2;
+        animation: spinSlow 28s linear infinite;
+      }
+
+      .corner-blocks {
+        pointer-events: none;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 2;
+        display: flex;
+        gap: 4px;
+        padding: 6px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--border);
+        animation: floatGentle 4.5s ease-in-out infinite;
+      }
+
+      .corner-blocks span {
+        width: 11px;
+        height: 11px;
+        display: block;
+      }
+
+      .titol-img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        max-height: 390px;
+        object-fit: contain;
+        display: block;
+      }
+
+      .titol-empty-guide {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .titol-empty-mark {
+        display: grid;
+        grid-template-columns: repeat(2, 18px);
+        gap: 6px;
+        opacity: 0.82;
+      }
+
+      .titol-empty-mark span {
+        width: 18px;
+        height: 18px;
+        display: block;
+      }
+
+      .titol-empty-title {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--ink);
+      }
+
+      .titol-empty-sub {
+        font-size: 0.76rem;
+        color: var(--ink-subtle);
+        max-width: 24ch;
+      }
+
+      .eichi-stamp {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 10px;
+        background: rgba(250, 248, 244, 0.94);
+        border: 1px solid var(--border);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 12px rgba(20, 20, 19, 0.08);
+      }
+
+      .eichi-name {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-size: 1.08rem;
+        line-height: 1;
+        color: var(--ink);
+      }
+
+      .eichi-brand {
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--ink-subtle);
+      }
+
+      .artwork-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 14px;
+        font-size: 0.75rem;
+        color: var(--ink-muted);
+      }
+
+      /* Projects Section (Real projects + logos) */
+      .section-block {
+        margin-top: 56px;
+        scroll-margin-top: 88px;
+      }
+
+      #inici {
+        scroll-margin-top: 88px;
+      }
+
+      .section-head {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: 768px) {
+        .section-head {
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+      }
+
+      .section-kicker {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--ink-subtle);
+        margin: 0 0 6px;
+      }
+
+      .section-title {
+        margin: 0;
+        font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        line-height: 1.15;
+      }
+
+      .filter-tabs {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 4px;
+        border-radius: 12px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+
+      .filter-tab {
+        padding: 7px 13px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--ink-muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease, color 150ms ease;
+      }
+
+      .filter-tab:hover {
+        color: var(--ink);
+        background: var(--bg);
+      }
+
+      .filter-tab[aria-pressed='true'] {
+        background: var(--ink);
+        color: #ffffff;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      @media (min-width: 640px) {
+        .projects-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .projects-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 20px;
+        border-radius: 18px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
+      }
+
+      .project-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 32px -16px rgba(20, 20, 19, 0.16);
+      }
+
+      .project-top {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .project-logo-box {
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 6px;
+      }
+
+      .project-logo-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      .project-logo-fallback {
+        font-weight: 800;
+        font-size: 1.15rem;
+        color: #ffffff;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .project-meta {
+        font-size: 0.76rem;
+        font-weight: 500;
+        color: var(--ink-subtle);
+      }
+
+      .project-name {
+        margin: 2px 0 0;
+        font-size: 1.12rem;
+        font-weight: 750;
+        letter-spacing: -0.02em;
+      }
+
+      .project-desc {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.55;
+        color: var(--ink-muted);
+      }
+
+      .project-footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(20, 20, 19, 0.08);
+      }
+
+      .logo-route {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--ink-subtle);
+      }
+
+      .project-links {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--ink);
+        white-space: nowrap;
+        transition: opacity 150ms ease;
+      }
+
+      .project-link:hover {
+        opacity: 0.7;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      /* Illustration Rotating Wheel (#ilustracions) */
+      .illus-panel {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        box-shadow: 0 16px 44px -22px rgba(20, 20, 19, 0.16);
+      }
+
+      @media (min-width: 1024px) {
+        .illus-panel {
+          grid-template-columns: 5fr 7fr;
+          align-items: stretch;
+          gap: 32px;
+          padding: 28px;
+        }
+      }
+
+      .illus-controls-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .illus-dial-wrap {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 16px;
+        border-radius: 16px;
+        background: var(--bg);
+        border: 1px solid rgba(20, 20, 19, 0.08);
+      }
+
+      .illus-dial-box {
+        position: relative;
+        width: 104px;
+        height: 104px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .illus-dial-svg {
+        width: 100%;
+        height: 100%;
+        transition: transform 520ms var(--ease-out);
+      }
+
+      .illus-dial-center {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .illus-steps {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .illus-step-btn {
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        color: var(--ink-muted);
+        transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+      }
+
+      .illus-step-btn:hover {
+        background: var(--surface-soft);
+        color: var(--ink);
+      }
+
+      .illus-step-btn[aria-pressed='true'] {
+        color: #ffffff;
+        border-color: transparent;
+      }
+
+      .illus-routes-grid {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      @media (min-width: 640px) {
+        .illus-routes-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .illus-routes-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .illus-route-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        padding: 11px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        text-align: left;
+        transition: transform 160ms var(--ease-out), border-color 160ms ease, background-color 160ms ease;
+      }
+
+      .illus-route-card:hover {
+        transform: translateY(-2px);
+        background: var(--bg);
+      }
+
+      .illus-route-card[aria-pressed='true'] {
+        background: #1f1633;
+        color: #faf8f4;
+        border-color: #1f1633;
+      }
+
+      .illus-route-card[aria-pressed='true'] .illus-route-path {
+        color: #c084fc;
+      }
+
+      .illus-route-path {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--ink-subtle);
+      }
+
+      .illus-route-name {
+        font-size: 0.82rem;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      .illus-stage {
+        position: relative;
+        min-height: 300px;
+        aspect-ratio: 4 / 3;
+        width: 100%;
+        border-radius: 16px;
+        border: 1.5px dashed rgba(20, 20, 19, 0.18);
+        background-color: #faf7f0;
+        background-image:
+          radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08), transparent 45%),
+          linear-gradient(to right, rgba(20, 20, 19, 0.035) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(20, 20, 19, 0.035) 1px, transparent 1px);
+        background-size: 100% 100%, 32px 32px, 32px 32px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .illus-img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      /* Ecosystem Companion Strip (Espai Memòria, La Galàxia) */
+      .ecosystem-grid {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      @media (min-width: 768px) {
+        .ecosystem-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .ecosystem-card {
+        padding: 18px 20px;
+        border-radius: 16px;
+        background: var(--surface-soft);
+        border: 1px solid var(--border);
+      }
+
+      /* Award Section (#premi: El que s'hi ha esforçat, ha premiat) */
+      .award-panel {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+        border-radius: 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        box-shadow: 0 16px 44px -22px rgba(20, 20, 19, 0.14);
+      }
+
+      @media (min-width: 1024px) {
+        .award-panel {
+          grid-template-columns: 7fr 5fr;
+          align-items: center;
+          gap: 32px;
+          padding: 32px;
+        }
+      }
+
+      .award-facts {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      @media (min-width: 640px) {
+        .award-facts {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .award-fact {
+        padding: 14px 16px;
+        border-radius: 14px;
+        background: var(--bg);
+        border: 1px solid rgba(20, 20, 19, 0.08);
+      }
+
+      .award-stage {
+        position: relative;
+        min-height: 280px;
+        aspect-ratio: 3 / 4;
+        max-height: 390px;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 16px;
+        border: 1.5px dashed rgba(20, 20, 19, 0.2);
+        background-color: #faf7f0;
+        background-image:
+          radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.08), transparent 45%),
+          radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.08), transparent 45%),
+          linear-gradient(to right, rgba(20, 20, 19, 0.035) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(20, 20, 19, 0.035) 1px, transparent 1px);
+        background-size: 100% 100%, 100% 100%, 28px 28px, 28px 28px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Identity Section (#identitat: Identitat per sobreviure) */
+      .identity-panel {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+        border-radius: 20px;
+        background: #1f1633;
+        color: #faf8f4;
+        border: 1px solid rgba(192, 132, 252, 0.25);
+      }
+
+      @media (min-width: 1024px) {
+        .identity-panel {
+          grid-template-columns: 7fr 5fr;
+          align-items: center;
+          gap: 32px;
+          padding: 34px;
+        }
+      }
+
+      .identity-roots {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      @media (min-width: 640px) {
+        .identity-roots {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .identity-card {
+        padding: 16px 18px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .nb-stripes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 10px;
+        border-radius: 999px;
+        overflow: hidden;
+        margin-bottom: 14px;
+        max-width: 220px;
+      }
+
+      /* Stack & Languages Grid (#eines) */
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      @media (min-width: 768px) {
+        .stack-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .stack-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 18px;
+        border-radius: 16px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        transition: transform 180ms var(--ease-out);
+      }
+
+      .stack-card:hover {
+        transform: translateY(-2px);
+      }
+
+      .stack-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      .stack-code {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--ink-subtle);
+      }
+
+      /* History Timeline Section (#historia: Una mica d'història) */
+      .history-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      @media (min-width: 640px) {
+        .history-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .history-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .history-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 20px;
+        border-radius: 16px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        transition: transform 180ms var(--ease-out);
+      }
+
+      .history-card:hover {
+        transform: translateY(-2px);
+      }
+
+      .history-card--featured {
+        background: #1f1633;
+        color: #faf8f4;
+        border-color: rgba(132, 204, 22, 0.35);
+      }
+
+      @media (min-width: 640px) {
+        .history-card--featured {
+          grid-column: span 2;
+        }
+      }
+
+      .history-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .history-year {
+        font-family: var(--font-mono);
+        font-variant-numeric: tabular-nums;
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .history-title {
+        margin: 8px 0 6px;
+        font-size: 1.06rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.25;
+      }
+
+      .history-desc {
+        margin: 0;
+        font-size: 0.86rem;
+        line-height: 1.58;
+        color: var(--ink-muted);
+      }
+
+      .history-card--featured .history-desc {
+        color: rgba(250, 248, 244, 0.8);
+      }
+
+      .history-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 4px;
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #84cc16;
+        text-decoration: none;
+      }
+
+      .history-cta:hover {
+        text-decoration: underline;
+      }
+
+      /* Culinary Passion Section (#taula) */
+      .taula-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+        border-radius: 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+
+      @media (min-width: 1024px) {
+        .taula-wrap {
+          grid-template-columns: 5fr 7fr;
+          align-items: center;
+          gap: 32px;
+          padding: 32px;
+        }
+      }
+
+      .dishes-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      @media (min-width: 640px) {
+        .dishes-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .dish-card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px;
+        border-radius: 16px;
+        background: var(--bg);
+        border: 1px solid rgba(20, 20, 19, 0.09);
+        transition: transform 200ms var(--ease-out);
+      }
+
+      .dish-card:hover {
+        transform: translateY(-3px);
+      }
+
+      .dish-art {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Philosophy & Constellation (#univers) */
+      .quote-banner {
+        margin: 0 0 24px;
+        padding: 22px 26px;
+        border-radius: 18px;
+        background: #1f1633;
+        color: #faf8f4;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .quote-banner {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+        }
+      }
+
+      .quote-text {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+        line-height: 1.45;
+        color: #faf8f4;
+      }
+
+      .values-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: 768px) {
+        .values-row {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .value-cell {
+        padding: 16px;
+        border-radius: 14px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+
+      .value-label {
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .value-desc {
+        margin: 4px 0 0;
+        font-size: 0.82rem;
+        color: var(--ink-muted);
+      }
+
+      .constellation-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      @media (min-width: 640px) {
+        .constellation-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .constellation-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .interest-card {
+        padding: 18px 20px;
+        border-radius: 16px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+
+      .palette-bar {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px 20px;
+        border-radius: 16px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+
+      .palette-swatches {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .palette-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--ink);
+      }
+
+      .palette-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        flex-shrink: 0;
+      }
+
+      /* 4-Column Pillars Strip */
+      .pillars-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      @media (min-width: 640px) {
+        .pillars-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .pillars-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .pillar-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 18px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        text-align: left;
+        transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
+      }
+
+      .pillar-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px -16px rgba(20, 20, 19, 0.16);
+      }
+
+      .pillar-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .pillar-num {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+        color: var(--ink-subtle);
+      }
+
+      .pillar-title {
+        margin: 12px 0 0;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+      }
+
+      .pillar-desc {
+        margin: 6px 0 0;
+        font-size: 0.875rem;
+        line-height: 1.55;
+        color: var(--ink-muted);
+      }
+
+      /* Marquee Ribbon */
+      .marquee-wrap {
+        margin-top: 36px;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        padding: 14px 0;
+      }
+
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        animation: marqueeSlide 32s linear infinite;
+      }
+
+      .marquee-track:hover {
+        animation-play-state: paused;
+      }
+
+      .marquee-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 0 20px;
+        white-space: nowrap;
+      }
+
+      .marquee-word {
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+      }
+
+      .marquee-brand {
+        font-size: 0.75rem;
+        color: rgba(20, 20, 19, 0.4);
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.75);
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        font-size: 0.78rem;
+        color: var(--ink-muted);
+      }
+
+      @media (min-width: 640px) {
+        .footer-inner {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      /* Modal */
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        background: rgba(20, 20, 19, 0.45);
+        backdrop-filter: blur(4px);
+      }
+
+      .modal-backdrop[data-open='true'] {
+        display: flex;
+      }
+
+      .modal-panel {
+        width: 100%;
+        max-width: 32rem;
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        padding: 24px;
+        box-shadow: 0 24px 60px -16px rgba(20, 20, 19, 0.35);
+      }
+
+      @media (min-width: 640px) {
+        .modal-panel {
+          padding: 32px;
+        }
+      }
+
+      .modal-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .modal-title {
+        margin: 4px 0 0;
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      .field {
+        margin-top: 16px;
+      }
+
+      .field label {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 600;
+      }
+
+      .field input,
+      .field textarea {
+        margin-top: 6px;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid rgba(20, 20, 19, 0.18);
+        background: #ffffff;
+        padding: 10px 14px;
+        font-family: inherit;
+        font-size: 0.875rem;
+        color: var(--ink);
+      }
+
+      .field input:focus,
+      .field textarea:focus {
+        outline: none;
+        border-color: var(--ink);
+      }
+
+      .field-error {
+        margin: 4px 0 0;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #c82333;
+      }
+
+      .modal-actions {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .modal-success {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: #ffffff;
+      }
+
+      /* Animations (compositor-only) */
+      @keyframes spinSlow {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spinStep {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(90deg);
+        }
+      }
+
+      @keyframes pulseScale {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.16);
+        }
+      }
+
+      @keyframes floatGentle {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+
+      @keyframes marqueeSlide {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition-duration: 0.01ms !important;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Bar (3 zones) -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="#inici" class="brand">
+          <span class="brand-slash">/</span>mehillana
+        </a>
+
+        <nav class="nav-links" aria-label="Navegació principal">
+          <a href="#inici">Inici</a>
+          <a href="#projectes">Projectes</a>
+          <a href="#ilustracions">Dibuixos</a>
+          <a href="#identitat">Identitat</a>
+          <a href="#historia">Història</a>
+        </nav>
+
+        <a
+          class="btn-dark"
+          id="open-contact-top"
+          href="mailto:Neeeeeennnn@gmail.com?subject=Hola%20%40eichi%20%E2%80%94%20Proposta%20per%20a%20%2Fmehillana&body=Hola%20Etienne%20(%40eichi)%2C%0A%0AT'escric%20des%20del%20teu%20portfoli%20%2Fmehillana%20perqu%C3%A8%20m'agradaria%20parlar%20sobre%20un%20projecte.%0A%0ANom%20o%20col%C2%B7lectiu%3A%20%0AIdea%20o%20consulta%3A%20%0A%0ASalutacions%2C"
+        >
+          Parlem-ne
+        </a>
+      </div>
+    </header>
+
+    <main id="inici">
+      <div class="container">
+        <!-- Hero Split -->
+        <section
+          class="hero-grid"
+          aria-label="Presentació principal d'Etienne González Zárate i /mehillana"
+        >
+          <!-- Left Column -->
+          <div class="hero-left">
+            <div>
+              <div class="kicker">
+                <strong>Etienne González Zárate</strong>
+                <span aria-hidden="true">·</span>
+                <span class="mono">@eichi</span>
+                <span aria-hidden="true">·</span>
+                <span>Sant Cugat del Vallès</span>
+                <span aria-hidden="true">·</span>
+                <span>Marca comuna /mehillana</span>
+              </div>
+
+              <div id="roda">
+                <h1 class="hero-title">On la passió es converteix en</h1>
+
+                <!-- Kinetic Rotating Wheel Card -->
+                <div class="wheel-card" aria-roledescription="roda giratòria de conceptes">
+                  <div class="dial-row">
+                    <div class="dial-box" aria-hidden="true">
+                      <svg class="dial-svg" id="dial-svg" viewBox="0 0 120 120"></svg>
+                      <div class="dial-hub" id="dial-hub"></div>
+                      <div class="dial-pointer"></div>
+                    </div>
+
+                    <div class="wheel-controls-mobile">
+                      <button
+                        type="button"
+                        class="icon-btn js-prev-btn"
+                        aria-label="Concepte anterior de la roda"
+                      >
+                        ▲
+                      </button>
+                      <button
+                        type="button"
+                        class="icon-btn js-next-btn"
+                        aria-label="Següent concepte de la roda"
+                      >
+                        ▼
+                      </button>
+                      <button
+                        type="button"
+                        class="icon-btn js-play-btn"
+                        aria-label="Pausar roda giratòria"
+                      >
+                        ❚❚
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="wheel-drum" aria-live="polite">
+                    <div class="wheel-fade-top"></div>
+                    <div class="wheel-fade-bottom"></div>
+                    <div class="wheel-slot-highlight"></div>
+                    <div class="wheel-items" id="wheel-items"></div>
+                  </div>
+
+                  <div class="wheel-controls-desktop">
+                    <button
+                      type="button"
+                      class="icon-btn js-prev-btn"
+                      aria-label="Concepte anterior de la roda"
+                    >
+                      ▲
+                    </button>
+                    <button
+                      type="button"
+                      class="icon-btn js-play-btn"
+                      aria-label="Pausar roda giratòria"
+                    >
+                      ❚❚
+                    </button>
+                    <button
+                      type="button"
+                      class="icon-btn js-next-btn"
+                      aria-label="Següent concepte de la roda"
+                    >
+                      ▼
+                    </button>
+                  </div>
+                </div>
+
+                <div class="wheel-meta">
+                  <div class="descriptor">
+                    <span class="descriptor-diamond" aria-hidden="true"></span>
+                    <span id="wheel-descriptor">
+                      Ofici digital fet des del territori i amb gent d’aquí.
+                    </span>
+                  </div>
+
+                  <div
+                    class="segment-bar"
+                    id="wheel-segments"
+                    role="group"
+                    aria-label="Seleccionar concepte de la roda"
+                  ></div>
+                </div>
+              </div>
+
+              <p class="lead">
+                Desenvolupo programari cultural, útil i en català, vinculat al
+                territori, la geografia i la cultura viva. Sota el paraigua comú
+                <strong>/mehillana</strong>, transformo idees arrelades en eines
+                digitals obertes, privades i duradores.
+              </p>
+            </div>
+
+            <div class="hero-actions">
+              <a
+                class="btn-accent"
+                id="open-contact-hero"
+                href="mailto:Neeeeeennnn@gmail.com?subject=Hola%20%40eichi%20%E2%80%94%20Proposta%20per%20a%20%2Fmehillana&body=Hola%20Etienne%20(%40eichi)%2C%0A%0AT'escric%20des%20del%20teu%20portfoli%20%2Fmehillana%20perqu%C3%A8%20m'agradaria%20parlar%20sobre%20un%20projecte.%0A%0ANom%20o%20col%C2%B7lectiu%3A%20%0AIdea%20o%20consulta%3A%20%0A%0ASalutacions%2C"
+              >
+                <span>Connectar amb @eichi</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="#projectes" class="btn-outline">
+                <span>Veure projectes</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Empty Reserved titol.png Frame + Subtle eichi Signature -->
+          <div class="hero-right" id="signatura">
+            <div class="artwork-card">
+              <div class="artwork-header">
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <div class="bauhaus-triad" aria-hidden="true">
+                    <span class="shape-circle"></span>
+                    <span class="shape-square"></span>
+                    <span class="shape-arc"></span>
+                    <span class="shape-diamond"></span>
+                  </div>
+                  <span class="mono" style="font-size: 0.75rem; color: var(--ink-muted)">
+                    titol.png
+                  </span>
+                </div>
+                <span
+                  class="mono"
+                  style="font-size: 0.75rem; font-variant-numeric: tabular-nums; color: var(--ink-subtle)"
+                >
+                  41.4735° N · 2.0852° E
+                </span>
+              </div>
+
+              <div class="artwork-stage" id="titol-stage">
+                <svg class="orbit-svg" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle
+                    id="orbit-ring"
+                    cx="60"
+                    cy="60"
+                    r="46"
+                    fill="none"
+                    stroke="#e63946"
+                    stroke-width="2"
+                    stroke-dasharray="6 6"
+                  />
+                  <circle cx="60" cy="14" r="4" fill="#e63946" />
+                  <circle cx="106" cy="60" r="4" fill="#2563eb" />
+                  <circle cx="60" cy="106" r="4" fill="#f59e0b" />
+                  <circle cx="14" cy="60" r="4" fill="#10b981" />
+                </svg>
+
+                <div class="corner-blocks" aria-hidden="true">
+                  <span style="background: #e63946; border-radius: 2px"></span>
+                  <span style="background: #f59e0b; border-radius: 999px"></span>
+                  <span style="background: #10b981; border-radius: 2px"></span>
+                  <span
+                    id="corner-dynamic"
+                    style="background: #e63946; border-bottom-right-radius: 999px"
+                  ></span>
+                </div>
+
+                <!-- Subtle empty guide behind transparent titol.png -->
+                <div class="titol-empty-guide" id="titol-guide">
+                  <div class="titol-empty-mark" aria-hidden="true">
+                    <span style="background: #e63946; border-radius: 999px"></span>
+                    <span style="background: #2563eb; border-top-left-radius: 12px"></span>
+                    <span style="background: #f59e0b"></span>
+                    <span style="background: #10b981; transform: rotate(45deg)"></span>
+                  </div>
+                  <div class="titol-empty-title">./titol.png</div>
+                  <div class="titol-empty-sub">
+                    Espai reservat per a la teva il·lustració principal
+                  </div>
+                </div>
+
+                <img
+                  id="titol-img"
+                  class="titol-img"
+                  src="./titol.png"
+                  alt="Espai reservat per a titol.png — portfoli /mehillana d'Etienne González Zárate"
+                  referrerpolicy="no-referrer"
+                />
+
+                <!-- Subtle eichi signature -->
+                <div class="eichi-stamp">
+                  <svg width="22" height="18" viewBox="0 0 28 22" fill="none" aria-hidden="true">
+                    <path
+                      id="eichi-stroke"
+                      d="M3 14C7 6 12 4 13 10C14 15 9 18 6 16C3 14 14 7 18 11C20 13 21 15 25 8"
+                      stroke="#c82333"
+                      stroke-width="2.1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle cx="24.5" cy="4.5" r="2" fill="#e63946" />
+                  </svg>
+                  <div style="display: flex; align-items: baseline; gap: 6px">
+                    <span class="eichi-name">eichi</span>
+                    <span class="eichi-brand">/mehillana</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="artwork-footer">
+                <span>Etienne González Zárate · @eichi</span>
+                <span id="artwork-active-word" style="font-weight: 700; color: var(--accent-ink)">
+                  talent local
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Real Projects Catalog from Google & GitHub -->
+        <section id="projectes" class="section-block" aria-label="Projectes de /mehillana">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Obra oberta · github.com/mehillana</p>
+              <h2 class="section-title">Projectes arrelats i programari en català</h2>
+            </div>
+
+            <div class="filter-tabs" role="group" aria-label="Filtrar projectes per categoria">
+              <button
+                type="button"
+                class="filter-tab"
+                data-category="tots"
+                aria-pressed="true"
+              >
+                Tots
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                data-category="programari"
+                aria-pressed="false"
+              >
+                Programari
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                data-category="cultura"
+                aria-pressed="false"
+              >
+                Cultura i geografia
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                data-category="joc"
+                aria-pressed="false"
+              >
+                Joc i còmic
+              </button>
+            </div>
+          </div>
+
+          <div class="projects-grid" id="projects-grid"></div>
+
+          <div class="ecosystem-grid" aria-label="Altres projectes i xarxes de /mehillana">
+            <article class="ecosystem-card">
+              <div class="project-meta">Refugi offline-first · Privadesa</div>
+              <h3 class="project-name" style="font-size: 1rem">Espai Memòria</h3>
+              <p class="project-desc" style="margin-top: 6px">
+                Eina web de codi obert per a la gestió del dol mitjançant escriptura
+                minimalista i emmagatzematge 100% local al navegador, sense servidors.
+              </p>
+            </article>
+            <article class="ecosystem-card">
+              <div class="project-meta">Directori digital · Català</div>
+              <h3 class="project-name" style="font-size: 1rem">La Galàxia</h3>
+              <p class="project-desc" style="margin-top: 6px">
+                Presència activa al directori col·laboratiu de creadors digitals i
+                projectes independents en llengua catalana.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Illustration Rotating Wheel (ilustracio1.png .. ilustracio12.png) -->
+        <section
+          id="ilustracions"
+          class="section-block"
+          aria-label="Rodeta de dibuixos i il·lustracions personals"
+        >
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Il·lustració i dibuixos · ./ilustracio1.png — 12</p>
+              <h2 class="section-title">Rodeta de dibuixos i il·lustracions</h2>
+            </div>
+            <span class="mono" id="illus-route-badge" style="font-size: 0.8rem; color: var(--ink-muted)">
+              ./ilustracio1.png
+            </span>
+          </div>
+
+          <div class="illus-panel">
+            <div class="illus-controls-col">
+              <div>
+                <div class="illus-dial-wrap">
+                  <div class="illus-dial-box" aria-hidden="true">
+                    <svg class="illus-dial-svg" id="illus-dial-svg" viewBox="0 0 120 120"></svg>
+                    <div class="illus-dial-center" id="illus-dial-center">01/12</div>
+                  </div>
+                  <div>
+                    <p
+                      class="mono"
+                      id="illus-active-file"
+                      style="margin: 0; font-size: 0.74rem; color: var(--ink-subtle)"
+                    >
+                      ./ilustracio1.png
+                    </p>
+                    <h3
+                      id="illus-active-title"
+                      style="margin: 4px 0 6px; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em"
+                    >
+                      Mapa digital personal
+                    </h3>
+                    <p
+                      id="illus-active-caption"
+                      style="margin: 0; font-size: 0.86rem; line-height: 1.5; color: var(--ink-muted)"
+                    >
+                      Cartografies afectives, coordenades i territori viscut.
+                    </p>
+                  </div>
+                </div>
+
+                <div style="margin-top: 16px">
+                  <div
+                    class="illus-steps"
+                    id="illus-steps"
+                    role="group"
+                    aria-label="Triar dibuix de l'1 al 12"
+                  ></div>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <button
+                    type="button"
+                    class="icon-btn"
+                    id="illus-prev"
+                    aria-label="Dibuix anterior"
+                  >
+                    ◀
+                  </button>
+                  <button
+                    type="button"
+                    class="icon-btn"
+                    id="illus-play"
+                    aria-label="Pausar rodeta de dibuixos"
+                  >
+                    ❚❚
+                  </button>
+                  <button
+                    type="button"
+                    class="icon-btn"
+                    id="illus-next"
+                    aria-label="Següent dibuix"
+                  >
+                    ▶
+                  </button>
+                </div>
+                <span style="font-size: 0.78rem; color: var(--ink-subtle)">
+                  Rutes preparades: <span class="mono">ilustracio1.png</span> .. <span class="mono">ilustracio12.png</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="illus-stage">
+              <div class="titol-empty-guide" id="illus-guide">
+                <div class="titol-empty-mark" aria-hidden="true">
+                  <span style="background: #8b5cf6; border-radius: 999px"></span>
+                  <span style="background: #db2777; border-top-left-radius: 12px"></span>
+                  <span style="background: #f97316"></span>
+                  <span style="background: #84cc16; transform: rotate(45deg)"></span>
+                </div>
+                <div class="titol-empty-title" id="illus-guide-path">./ilustracio1.png</div>
+                <div class="titol-empty-sub" id="illus-guide-title">
+                  Mapa digital personal
+                </div>
+              </div>
+              <img
+                id="illus-img"
+                class="illus-img"
+                src="./ilustracio1.png"
+                alt="Dibuix personal 1 de /mehillana"
+                referrerpolicy="no-referrer"
+              />
+              <div class="eichi-stamp">
+                <span class="eichi-name">eichi</span>
+                <span class="eichi-brand" id="illus-stamp-num">01/12</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="illus-routes-grid"
+            id="illus-routes-grid"
+            aria-label="Totes les rutes dels dotze dibuixos"
+          ></div>
+        </section>
+
+        <!-- Award Section: El que s'hi ha esforçat, ha premiat -->
+        <section
+          id="premi"
+          class="section-block"
+          aria-label="El que s'hi ha esforçat, ha premiat — Concurs Petits Camaleons"
+        >
+          <div class="award-panel">
+            <div>
+              <p class="section-kicker">Reconeixement · Sant Cugat del Vallès · 2026</p>
+              <h2 class="section-title">El que s’hi ha esforçat, ha premiat</h2>
+              <p class="lead" style="margin-top: 14px">
+                Vaig resultar guanyador del concurs artístic
+                <strong>«Fes el cartell de Petits Camaleons 2026»</strong>, impulsat pel
+                mitjà local <strong>TOT Sant Cugat</strong> juntament amb el festival de
+                música familiar <strong>Petits Camaleons</strong> en la seva 15a edició.
+              </p>
+              <p style="margin: 12px 0 0; font-size: 0.9rem; line-height: 1.6; color: var(--ink-muted)">
+                L’equip de Petits Camaleons va escollir la meva proposta dins la categoria de
+                participants previs al festival, amb un pack d’entrades familiars i
+                l’exposició del cartell durant el certamen a Sant Cugat.
+              </p>
+
+              <div class="award-facts">
+                <div class="award-fact">
+                  <div class="project-meta">Certamen</div>
+                  <div style="margin-top: 4px; font-weight: 700; font-size: 0.92rem">
+                    Petits Camaleons · 15a edició
+                  </div>
+                </div>
+                <div class="award-fact">
+                  <div class="project-meta">Categoria</div>
+                  <div style="margin-top: 4px; font-weight: 700; font-size: 0.92rem">
+                    Participants previs · TOT Sant Cugat
+                  </div>
+                </div>
+                <div class="award-fact">
+                  <div class="project-meta">Ruta del cartell</div>
+                  <div
+                    class="mono"
+                    style="margin-top: 4px; font-weight: 600; font-size: 0.72rem; white-space: nowrap"
+                  >
+                    ./cartell-camaleons.png
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="award-stage">
+              <div class="titol-empty-guide" id="award-guide">
+                <div class="titol-empty-mark" aria-hidden="true">
+                  <span style="background: #10b981; border-radius: 999px"></span>
+                  <span style="background: #f59e0b; border-top-left-radius: 12px"></span>
+                  <span style="background: #2563eb"></span>
+                  <span style="background: #e63946; transform: rotate(45deg)"></span>
+                </div>
+                <div class="titol-empty-title">./cartell-camaleons.png</div>
+                <div class="titol-empty-sub">
+                  Cartell premiat de Petits Camaleons (Sant Cugat)
+                </div>
+              </div>
+              <img
+                id="award-img"
+                class="illus-img"
+                src="./cartell-camaleons.png"
+                alt="Cartell guanyador de Petits Camaleons a Sant Cugat per Etienne González"
+                referrerpolicy="no-referrer"
+              />
+              <div class="eichi-stamp">
+                <span class="eichi-name">eichi</span>
+                <span class="eichi-brand">Petits Camaleons</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Identity Section: Identitat per sobreviure -->
+        <section
+          id="identitat"
+          class="section-block"
+          aria-label="Identitat per sobreviure — Identitat no-binària i arrels"
+        >
+          <div class="identity-panel">
+            <div>
+              <div class="nb-stripes" aria-hidden="true">
+                <span style="background: #fcf434"></span>
+                <span style="background: #ffffff"></span>
+                <span style="background: #9c59d1"></span>
+                <span style="background: #2c2c2c"></span>
+              </div>
+              <p class="section-kicker" style="color: #c084fc">
+                Identitat no-binària · Llengua i existència
+              </p>
+              <h2 class="section-title" style="color: #faf8f4">Identitat per sobreviure</h2>
+              <p style="margin: 14px 0 0; font-size: 1rem; line-height: 1.65; color: rgba(250, 248, 244, 0.9)">
+                Soc una persona <strong>no binàrie</strong>. Anomenar qui soc no és un detall
+                estètic: és una manera de sobreviure, d’habitar el món sense demanar permís i
+                de construir tecnologia que no obligui ningú a encabir-se en caselles tancades.
+              </p>
+              <p style="margin: 12px 0 0; font-size: 0.9rem; line-height: 1.6; color: rgba(250, 248, 244, 0.74)">
+                Nascut a Alemanya i resident a Sant Cugat del Vallès, porto a sobre una barreja
+                d’arrels peruanes, catalanes i franceses. El català, el codi obert i el dibuix
+                són el lloc on aquesta identitat respira amb llibertat.
+              </p>
+            </div>
+
+            <div class="identity-roots">
+              <div class="identity-card">
+                <div class="mono" style="font-size: 0.72rem; color: #fcf434">No-binari · @eichi</div>
+                <h3 style="margin: 6px 0 4px; font-size: 1rem; font-weight: 700">
+                  Fora dels motlles
+                </h3>
+                <p style="margin: 0; font-size: 0.84rem; line-height: 1.5; color: rgba(250, 248, 244, 0.78)">
+                  Mirada pròpia en interfícies respectuoses, sense recollida de dades ni etiquetes rígides.
+                </p>
+              </div>
+              <div class="identity-card">
+                <div class="mono" style="font-size: 0.72rem; color: #c084fc">Alemanya · Catalunya</div>
+                <h3 style="margin: 6px 0 4px; font-size: 1rem; font-weight: 700">
+                  Trajecte vital
+                </h3>
+                <p style="margin: 0; font-size: 0.84rem; line-height: 1.5; color: rgba(250, 248, 244, 0.78)">
+                  Nascut a Alemanya i arrelat a Sant Cugat del Vallès fent comunitat digital.
+                </p>
+              </div>
+              <div class="identity-card">
+                <div class="mono" style="font-size: 0.72rem; color: #f97316">Perú · Catalunya · França</div>
+                <h3 style="margin: 6px 0 4px; font-size: 1rem; font-weight: 700">
+                  Arrels creuades
+                </h3>
+                <p style="margin: 0; font-size: 0.84rem; line-height: 1.5; color: rgba(250, 248, 244, 0.78)">
+                  Cultura de frontera, memòria compartida i fusió present tant al codi com a la cuina.
+                </p>
+              </div>
+              <div class="identity-card">
+                <div class="mono" style="font-size: 0.72rem; color: #84cc16">Llengua catalana</div>
+                <h3 style="margin: 6px 0 4px; font-size: 1rem; font-weight: 700">
+                  Parlar i programar
+                </h3>
+                <p style="margin: 0; font-size: 0.84rem; line-height: 1.5; color: rgba(250, 248, 244, 0.78)">
+                  Fer que el català i l’aranès visquin dins de programari quotidià i lliure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- History Timeline Section (#historia: Una mica d'història) -->
+        <section
+          id="historia"
+          class="section-block"
+          aria-label="Una mica d'història — Cronologia personal del 2014 al 2026 i actualitat"
+        >
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Trajectòria · Del 2014 fins avui</p>
+              <h2 class="section-title">Una mica d’història</h2>
+            </div>
+            <span class="mono" style="font-size: 0.8rem; color: var(--ink-muted)">
+              2014 — Juny 2026 · I segueixo programant
+            </span>
+          </div>
+
+          <div class="history-grid" id="history-grid"></div>
+        </section>
+
+        <!-- Languages & Tools Section (#eines) -->
+        <section
+          id="eines"
+          class="section-block"
+          aria-label="Llenguatges de programació i eines de treball"
+        >
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Ofici tècnic · Llenguatges i entorns</p>
+              <h2 class="section-title">Amb què construeixo i programo</h2>
+            </div>
+            <span class="mono" style="font-size: 0.8rem; color: var(--ink-muted)">
+              HTML · CSS · JS · Java · Python · Chaufa · C · GitHub
+            </span>
+          </div>
+
+          <div class="stack-grid" id="stack-grid"></div>
+        </section>
+
+        <!-- Culinary Passion Section (Cultura també és taula) -->
+        <section id="taula" class="section-block" aria-label="Passió culinària i gastronomia de fusió">
+          <div class="taula-wrap">
+            <div>
+              <p class="section-kicker">Gastronomia i fusió · Cultura també és taula</p>
+              <h2 class="section-title">El que m’agrada menjar i cuinar</h2>
+              <p class="lead" style="margin-top: 14px">
+                La gastronomia és una altra manera d’explicar el món: tècniques,
+                ingredients i històries que viatgen i es transformen. Entre els meus
+                gustos hi ha el <strong>sushi</strong>, la <strong>yucca fregida</strong>,
+                l’<strong>arròs chaufa</strong> i les cuines que connecten tradicions
+                diferents — arrels peruanes, catalanes i franceses a taula.
+              </p>
+              <p style="margin: 12px 0 0; font-size: 0.875rem; line-height: 1.6; color: var(--ink-muted)">
+                Passa el mateix amb el programari: les idees més vives apareixen quan
+                disciplines, llengües i sensibilitats diferents comparteixen espai.
+              </p>
+            </div>
+
+            <div class="dishes-grid">
+              <article class="dish-card">
+                <div class="dish-art" aria-hidden="true">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <rect x="4" y="10" width="28" height="16" rx="8" fill="#1F1633"/>
+                    <rect x="7" y="13" width="22" height="10" rx="5" fill="#FAF8F4"/>
+                    <circle cx="18" cy="18" r="4.5" fill="#E63946"/>
+                    <rect x="24" y="15" width="3" height="6" rx="1.5" fill="#10B981"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="project-meta">Precisió · Frescor</div>
+                  <h3 class="project-name" style="font-size: 1rem">Sushi</h3>
+                  <p class="project-desc" style="margin-top: 4px">
+                    Atenció al detall, tall net i equilibri entre arròs, peix i alga.
+                  </p>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-art" aria-hidden="true">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <rect x="7" y="8" width="7" height="20" rx="3" fill="#F59E0B" transform="rotate(-8 7 8)"/>
+                    <rect x="15" y="7" width="7" height="22" rx="3" fill="#F97316"/>
+                    <rect x="23" y="9" width="7" height="19" rx="3" fill="#D97706" transform="rotate(8 23 9)"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="project-meta">Arrel · Cruixent</div>
+                  <h3 class="project-name" style="font-size: 1rem">Yucca fregida</h3>
+                  <p class="project-desc" style="margin-top: 4px">
+                    Memòria peruana, textura daurada per fora i tendra per dins.
+                  </p>
+                </div>
+              </article>
+
+              <article class="dish-card">
+                <div class="dish-art" aria-hidden="true">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <path d="M5 18H31C31 25.18 25.18 31 18 31C10.82 31 5 25.18 5 18Z" fill="#D97706"/>
+                    <path d="M21 6L28 15" stroke="#141413" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M26 5L30 14" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="13" cy="14" r="2.2" fill="#84CC16"/>
+                    <circle cx="18" cy="13" r="2.2" fill="#F97316"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="project-meta">Fusió · Trobada</div>
+                  <h3 class="project-name" style="font-size: 1rem">Cuina de fusió</h3>
+                  <p class="project-desc" style="margin-top: 4px">
+                    Wok, espècies i barreja cultural que també inspira el projecte Chaufa.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Philosophy, Values & Constellation of Interests (from README) -->
+        <section id="univers" class="section-block" aria-label="Una manera de fer i constel·lació d'interessos">
+          <div class="quote-banner">
+            <blockquote class="quote-text">
+              «M’agrada imaginar la tecnologia com un lloc habitable: fet de llengua,
+              memòria, curiositat i petits gestos quotidians.»
+            </blockquote>
+            <a
+              href="https://github.com/mehillana"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-outline"
+              style="background: rgba(255,255,255,0.1); color: #FAF8F4; border-color: rgba(255,255,255,0.22)"
+            >
+              GitHub · @mehillana ↗
+            </a>
+          </div>
+
+          <div class="values-row">
+            <div class="value-cell">
+              <div class="value-label" style="color: #6D28D9">CURA</div>
+              <p class="value-desc">Privadesa i atenció sense dades comercials de pas.</p>
+            </div>
+            <div class="value-cell">
+              <div class="value-label" style="color: #1D4ED8">CURIOSITAT</div>
+              <p class="value-desc">Aprendre i connectar idees entre disciplines.</p>
+            </div>
+            <div class="value-cell">
+              <div class="value-label" style="color: #C82333">IDENTITAT</div>
+              <p class="value-desc">Llengua catalana i territori com a espai viu.</p>
+            </div>
+            <div class="value-cell">
+              <div class="value-label" style="color: #047857">JOC</div>
+              <p class="value-desc">Imaginar mons propis sense demanar permís.</p>
+            </div>
+          </div>
+
+          <div class="section-head" style="margin-top: 28px">
+            <div>
+              <p class="section-kicker">Constel·lació d’interessos</p>
+              <h2 class="section-title">Punts que es connecten entre si</h2>
+            </div>
+          </div>
+
+          <div class="constellation-grid">
+            <article class="interest-card">
+              <div class="project-meta">01 · Català</div>
+              <h3 class="project-name">Llengua i tecnologia</h3>
+              <p class="project-desc" style="margin-top: 6px">
+                Català en productes digitals, llenguatge natural i eines que parlen amb les persones.
+              </p>
+            </article>
+            <article class="interest-card">
+              <div class="project-meta">02 · Sant Cugat i país</div>
+              <h3 class="project-name">Geografia i territori</h3>
+              <p class="project-desc" style="margin-top: 6px">
+                Mapes, paisatges i les maneres com organitzem i expliquem l’espai compartit.
+              </p>
+            </article>
+            <article class="interest-card">
+              <div class="project-meta">03 · Memòria</div>
+              <h3 class="project-name">Història i cronologia</h3>
+              <p class="project-desc" style="margin-top: 6px">
+                Memòries, processos socials i fils que uneixen el passat i el present.
+              </p>
+            </article>
+            <article class="interest-card">
+              <div class="project-meta">04 · So</div>
+              <h3 class="project-name">Música i escolta</h3>
+              <p class="project-desc" style="margin-top: 6px">
+                Atenció al detall i la relació entre so, emoció i context.
+              </p>
+            </article>
+            <article class="interest-card">
+              <div class="project-meta">05 · Cuina</div>
+              <h3 class="project-name">Gastronomia i fusió</h3>
+              <p class="project-desc" style="margin-top: 6px">
+                Cuines que expliquen trobades culturals, tècnica, origen i imaginació.
+              </p>
+            </article>
+            <article class="interest-card">
+              <div class="project-meta">06 · Estètica</div>
+              <h3 class="project-name">Disseny i identitat visual</h3>
+              <p class="project-desc" style="margin-top: 6px">
+                Colors i atmosferes que ajuden cada projecte a trobar la seva veu.
+              </p>
+            </article>
+          </div>
+
+          <div class="palette-bar">
+            <span style="font-size: 0.82rem; font-weight: 600; color: var(--ink-muted)">
+              Paleta personal: <em>lavanda per a la calma, violeta per a la imaginació i colors vius per al joc</em>
+            </span>
+            <div class="palette-swatches">
+              <span class="palette-chip"><span class="palette-dot" style="background:#1F1633"></span>#1F1633</span>
+              <span class="palette-chip"><span class="palette-dot" style="background:#8B5CF6"></span>#8B5CF6</span>
+              <span class="palette-chip"><span class="palette-dot" style="background:#C084FC"></span>#C084FC</span>
+              <span class="palette-chip"><span class="palette-dot" style="background:#DB2777"></span>#DB2777</span>
+              <span class="palette-chip"><span class="palette-dot" style="background:#F97316"></span>#F97316</span>
+              <span class="palette-chip"><span class="palette-dot" style="background:#84CC16"></span>#84CC16</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Territory Pillars + Marquee -->
+        <section id="territori" class="section-block" aria-label="Pilars de /mehillana">
+          <div class="pillars-grid" id="pillars-grid"></div>
+
+          <div class="marquee-wrap" aria-hidden="true">
+            <div class="marquee-track" id="marquee-track"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+          <strong style="color: var(--ink)">/mehillana</strong>
+          <span aria-hidden="true">·</span>
+          <span>Etienne González Zárate (@eichi)</span>
+          <span aria-hidden="true">·</span>
+          <span>Sant Cugat del Vallès · Programari cultural en català</span>
+        </div>
+        <a
+          id="open-contact-footer"
+          href="mailto:Neeeeeennnn@gmail.com?subject=Hola%20%40eichi%20%E2%80%94%20Proposta%20per%20a%20%2Fmehillana&body=Hola%20Etienne%20(%40eichi)%2C%0A%0AT'escric%20des%20del%20teu%20portfoli%20%2Fmehillana%20perqu%C3%A8%20m'agradaria%20parlar%20sobre%20un%20projecte.%0A%0ANom%20o%20col%C2%B7lectiu%3A%20%0AIdea%20o%20consulta%3A%20%0A%0ASalutacions%2C"
+          style="font-weight: 600; text-decoration: underline; text-underline-offset: 4px"
+        >
+          Proposa un projecte territorial
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const CONCEPTS = [
+          {
+            id: 'talent-local',
+            phrase: 'talent local',
+            ink: '#C82333',
+            vivid: '#E63946',
+            tint: '#FDECEE',
+            shape: 'circle',
+            descriptor: 'Ofici digital fet des del territori i amb gent d’aquí.',
+          },
+          {
+            id: 'solucions',
+            phrase: 'solucions',
+            ink: '#1D4ED8',
+            vivid: '#2563EB',
+            tint: '#EFF6FF',
+            shape: 'arc',
+            descriptor: 'Programari útil i clar que resol necessitats reals.',
+          },
+          {
+            id: 'sobirania',
+            phrase: 'sobirania',
+            ink: '#B45309',
+            vivid: '#F59E0B',
+            tint: '#FEF3C7',
+            shape: 'triangle',
+            descriptor: 'Eines obertes, pròpies i en català sense dependències.',
+          },
+          {
+            id: 'codi',
+            phrase: 'codi',
+            ink: '#047857',
+            vivid: '#10B981',
+            tint: '#ECFDF5',
+            shape: 'diamond',
+            descriptor: 'Arquitectura neta, lleugera i pensada per durar.',
+          },
+          {
+            id: 'creativitat',
+            phrase: 'creativitat',
+            ink: '#BE185D',
+            vivid: '#EC4899',
+            tint: '#FDF2F8',
+            shape: 'hexagon',
+            descriptor: 'Disseny geomètric, expressió cultural i moviment viu.',
+          },
+          {
+            id: 'ajuda',
+            phrase: 'ajuda',
+            ink: '#6D28D9',
+            vivid: '#8B5CF6',
+            tint: '#F5F3FF',
+            shape: 'cross',
+            descriptor: 'Tecnologia propera al servei de comunitats i projectes.',
+          },
+        ];
+
+        const PROJECTS = [
+          {
+            id: 'naan',
+            name: 'Naan',
+            category: 'programari',
+            categoryLabel: 'Programari · Privadesa',
+            accent: '#2563EB',
+            logoPath: './logos/naan.svg',
+            description:
+              'Aplicació de xat i missatgeria amb xifratge de punta a punta, sales en temps real, notes de veu i pissarra en un sol fitxer HTML.',
+            liveUrl: 'https://mehillana.github.io/naan/',
+            liveLabel: 'Obrir web',
+            repoUrl: 'https://github.com/mehillana/naan',
+          },
+          {
+            id: 'lavender',
+            name: 'Lavender',
+            category: 'programari',
+            categoryLabel: 'Utilitats · Català',
+            accent: '#6D28D9',
+            logoPath: './logos/lavender.svg',
+            description:
+              'Calendari i organitzador personal de codi obert que entén frases en català, anglès, francès i aranès de manera 100% local.',
+            liveUrl: 'https://mehillana.github.io/lavender/',
+            liveLabel: 'Obrir web',
+            repoUrl: 'https://github.com/mehillana/lavender',
+          },
+          {
+            id: 'noseque',
+            name: 'Noséquè',
+            category: 'cultura',
+            categoryLabel: 'Cultura · Geografia',
+            accent: '#047857',
+            logoPath: './logos/noseque.png',
+            description:
+              'Divulgació cultural, lingüística, històrica i geogràfica en català amb estètica artesanal d’aquarel·la i llibreta.',
+            liveUrl: 'https://mehillana.github.io/noseque/',
+            liveLabel: 'Visitar web',
+            repoUrl: 'https://github.com/mehillana/noseque',
+          },
+          {
+            id: 'farmia',
+            name: 'Farmia',
+            category: 'joc',
+            categoryLabel: 'Videojoc · Territori',
+            accent: '#B45309',
+            logoPath: './logos/farmia.png',
+            description:
+              'Videojoc de gestió i misteri en HTML ambientat en un poble de muntanya: cuida l’hort, ajuda els veïns i explora la Dama del cim.',
+            liveUrl: 'https://mehillana.github.io/farmia/',
+            liveLabel: 'Jugar-hi',
+            repoUrl: 'https://github.com/mehillana/farmia',
+          },
+          {
+            id: 'laconferencia',
+            name: 'La Conferència',
+            category: 'cultura',
+            categoryLabel: 'Webcòmic · Sàtira',
+            accent: '#C82333',
+            logoPath: './logos/laconferencia.png',
+            description:
+              'Webcòmic satíric en català sobre l’actualitat política amb lector de tires individuals i vista en columna.',
+            liveUrl: 'https://mehillana.github.io/laconferencia/',
+            liveLabel: 'Llegir tires',
+            repoUrl: 'https://github.com/mehillana/laconferencia',
+          },
+          {
+            id: 'chaufa',
+            name: 'Chaufa',
+            category: 'programari',
+            categoryLabel: 'Llenguatge (.cha) · Python',
+            accent: '#D97706',
+            logoPath: './logos/chaufa.svg',
+            description:
+              'Llenguatge minimalista (.cha) executat amb Python 3.x: prefix `/` per a pantalla i `:` per a funcions, inspirat en la cuina de fusió.',
+            repoUrl: 'https://github.com/mehillana/chaufa',
+          },
+          {
+            id: 'mehsnake',
+            name: 'Mehsnake',
+            category: 'joc',
+            categoryLabel: 'Java ME (.jar) · 18 apps',
+            accent: '#059669',
+            logoPath: './logos/mehsnake.svg',
+            description:
+              'Suite de 18 aplicacions i jocs clàssics en Java ME (.jar): CatMaps, HorariInsti, CaixaEines, MehCrossing, Nokianva, GitNokia i XatBT.',
+            repoUrl: 'https://github.com/mehillana/mehsnake',
+          },
+        ];
+
+        const STACK_ITEMS = [
+          {
+            name: 'HTML',
+            code: 'html5',
+            color: '#E34F26',
+            desc: 'Estructures portàtils i aplicacions autònomes en un sol fitxer, com Naan o aquest portfoli.',
+          },
+          {
+            name: 'CSS',
+            code: 'css3',
+            color: '#2563EB',
+            desc: 'Disseny geomètric, aquarel·la artesana (Noséquè), glassmorphism i animacions fluides.',
+          },
+          {
+            name: 'JavaScript',
+            code: 'js',
+            color: '#D97706',
+            desc: 'Motor de joc a Farmia, processament de llenguatge natural a Lavender i web 100% local.',
+          },
+          {
+            name: 'Java',
+            code: 'java · .jar',
+            color: '#C82333',
+            desc: 'Desenvolupament de 18 aplicacions i videojocs retro en Java ME dins el projecte Mehsnake.',
+          },
+          {
+            name: 'Python',
+            code: 'python3',
+            color: '#047857',
+            desc: 'Automatització, processament de dades i intèrpret de comandes del llenguatge Chaufa.',
+          },
+          {
+            name: 'Chaufa',
+            code: '.cha',
+            color: '#F97316',
+            desc: 'Llenguatge minimalista propi amb prefixos `/` i `:` per organitzar dades sense codi sobrer.',
+          },
+          {
+            name: 'C',
+            code: 'c',
+            color: '#4F46E5',
+            desc: 'Programació de sistemes, memòria directa i fonaments sòlids de baix nivell.',
+          },
+          {
+            name: 'GitHub',
+            code: '@mehillana',
+            color: '#1F1633',
+            desc: 'Codi obert, control de versions i allotjament directe amb GitHub Pages en català.',
+          },
+        ];
+
+        const HISTORY_MILESTONES = [
+          {
+            period: '2014',
+            title: 'Neixo',
+            desc: 'Neixo a Alemanya el 2014. Primers passos en un entorn familiar divers entre cultures i llengües.',
+            color: '#E63946',
+            shape: 'circle',
+          },
+          {
+            period: '2015',
+            title: 'Arribo a Espanya',
+            desc: 'Al 2015 arribo a Espanya i començo a construir vincle amb el territori, la llengua catalana i l’entorn proper.',
+            color: '#F59E0B',
+            shape: 'arc',
+          },
+          {
+            period: '2020',
+            title: 'Interès per la cartografia',
+            desc: 'Al 2020 començo a interessar-me per la cartografia: mapes, paisatges, coordenades i lectura geogràfica del món.',
+            color: '#10B981',
+            shape: 'triangle',
+          },
+          {
+            period: '2024',
+            title: 'Codi i disciplines barrejades',
+            desc: 'Al 2024 començo a experimentar amb codi i a barrejar disciplines: programació, dibuix, geografia i creació cultural.',
+            color: '#2563EB',
+            shape: 'diamond',
+          },
+          {
+            period: '2025',
+            title: 'El pas cap a /mehillana',
+            desc: 'Al 2025 començo el meu pas cap a /mehillana, imaginant un espai comú de programari lliure, útil i en català.',
+            color: '#8B5CF6',
+            shape: 'hexagon',
+          },
+          {
+            period: 'Juny 2026',
+            title: 'S’inicia aquesta gran història',
+            desc: 'No és fins al juny del 2026 que s’inicia aquesta gran història: projectes públics, identitat consolidada i comunitat viva.',
+            color: '#DB2777',
+            shape: 'cross',
+          },
+          {
+            period: 'Avui',
+            title: 'I segueixo programant',
+            desc: 'Continuo programant, cartografiant i experimentant cada dia amb noves idees útils, obertes i arrelades al territori.',
+            color: '#84CC16',
+            shape: 'circle',
+            featured: true,
+          },
+        ];
+
+        const PILLARS = [
+          {
+            num: '01.',
+            title: 'Programari cultural',
+            desc: 'Aplicacions i arxius vius que posen la creació i la memòria col·lectiva al centre.',
+            color: '#E63946',
+            shape: 'circle',
+            conceptIdx: 4,
+          },
+          {
+            num: '02.',
+            title: 'Útil i en català',
+            desc: 'Eines quotidianes sense friccions, pensades i escrites íntegrament en llengua catalana.',
+            color: '#2563EB',
+            shape: 'arc',
+            conceptIdx: 1,
+          },
+          {
+            num: '03.',
+            title: 'Territori i geografia',
+            desc: 'Mapes, dades de proximitat i projectes arrelats al paisatge, pobles i comarques.',
+            color: '#10B981',
+            shape: 'triangle',
+            conceptIdx: 0,
+          },
+          {
+            num: '04.',
+            title: 'Sobirania i /mehillana',
+            desc: 'Marca comuna que agrupa codi obert, creativitat compartida i tecnologia sobirana.',
+            color: '#F59E0B',
+            shape: 'diamond',
+            conceptIdx: 2,
+          },
+        ];
+
+        function glyphSVG(shape, color, size) {
+          let inner = '';
+          if (shape === 'circle') {
+            inner = `<circle cx="16" cy="16" r="12" fill="${color}"/><circle cx="16" cy="16" r="5" fill="#FAF8F4"/>`;
+          } else if (shape === 'arc') {
+            inner = `<path d="M4 26A22 22 0 0 1 26 4v22H4Z" fill="${color}"/><circle cx="20" cy="20" r="4" fill="#FAF8F4"/>`;
+          } else if (shape === 'triangle') {
+            inner = `<polygon points="16,3 29,27 3,27" fill="${color}"/><polygon points="16,13 22,24 10,24" fill="#FAF8F4"/>`;
+          } else if (shape === 'diamond') {
+            inner = `<polygon points="16,2 30,16 16,30 2,16" fill="${color}"/><rect x="12" y="12" width="8" height="8" fill="#FAF8F4"/>`;
+          } else if (shape === 'hexagon') {
+            inner = `<polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="${color}"/><circle cx="16" cy="16" r="4.5" fill="#FAF8F4"/>`;
+          } else {
+            inner = `<rect x="12" y="3" width="8" height="26" rx="1" fill="${color}"/><rect x="3" y="12" width="26" height="8" rx="1" fill="${color}"/><circle cx="16" cy="16" r="3.5" fill="#FAF8F4"/>`;
+          }
+          return `<svg width="${size}" height="${size}" viewBox="0 0 32 32" fill="none" aria-hidden="true">${inner}</svg>`;
+        }
+
+        function wrapIndex(idx, len) {
+          return ((idx % len) + len) % len;
+        }
+
+        let activeIndex = 0;
+        let isPlaying = true;
+        let activeCategory = 'tots';
+        let intervalId = null;
+
+        const root = document.documentElement;
+        const dialSvg = document.getElementById('dial-svg');
+        const dialHub = document.getElementById('dial-hub');
+        const wheelItemsEl = document.getElementById('wheel-items');
+        const wheelDescEl = document.getElementById('wheel-descriptor');
+        const segmentsEl = document.getElementById('wheel-segments');
+        const artworkWordEl = document.getElementById('artwork-active-word');
+        const orbitRingEl = document.getElementById('orbit-ring');
+        const cornerDynamicEl = document.getElementById('corner-dynamic');
+        const eichiStrokeEl = document.getElementById('eichi-stroke');
+
+        function buildDial() {
+          let paths = `<circle cx="60" cy="60" r="54" fill="none" stroke="#141413" stroke-opacity="0.1" stroke-width="1.5" stroke-dasharray="4 4"/>`;
+          CONCEPTS.forEach((c, idx) => {
+            const a1 = ((idx * 60 - 30) * Math.PI) / 180;
+            const a2 = ((idx * 60 + 30) * Math.PI) / 180;
+            const ro = 49;
+            const ri = 29;
+            const x1 = 60 + ro * Math.cos(a1);
+            const y1 = 60 + ro * Math.sin(a1);
+            const x2 = 60 + ro * Math.cos(a2);
+            const y2 = 60 + ro * Math.sin(a2);
+            const x3 = 60 + ri * Math.cos(a2);
+            const y3 = 60 + ri * Math.sin(a2);
+            const x4 = 60 + ri * Math.cos(a1);
+            const y4 = 60 + ri * Math.sin(a1);
+            paths += `<path data-dial-idx="${idx}" d="M ${x1} ${y1} A ${ro} ${ro} 0 0 1 ${x2} ${y2} L ${x3} ${y3} A ${ri} ${ri} 0 0 0 ${x4} ${y4} Z" fill="${c.vivid}" fill-opacity="0.28" stroke="#FFFFFF" stroke-width="2"/>`;
+          });
+          dialSvg.innerHTML = paths;
+        }
+
+        function buildSegments() {
+          segmentsEl.innerHTML = CONCEPTS.map(
+            (c, idx) => `
+            <button type="button" class="segment-btn" data-wheel-idx="${idx}" aria-pressed="${idx === activeIndex}">
+              <span class="segment-swatch" style="background:${c.vivid}" aria-hidden="true"></span>
+              <span>${c.phrase}</span>
+            </button>`,
+          ).join('');
+
+          segmentsEl.querySelectorAll('.segment-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              setActive(Number(btn.dataset.wheelIdx));
+            });
+          });
+        }
+
+        function buildWheelNodes() {
+          wheelItemsEl.innerHTML = CONCEPTS.map(
+            (c, idx) => `
+            <button type="button" class="wheel-item" data-drum-idx="${idx}">
+              <span class="wheel-item-label">${c.phrase}</span>
+              <span class="wheel-counter"></span>
+            </button>`,
+          ).join('');
+
+          wheelItemsEl.querySelectorAll('.wheel-item').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              setActive(Number(btn.dataset.drumIdx));
+            });
+          });
+        }
+
+        function renderWheel() {
+          const active = CONCEPTS[activeIndex];
+          root.style.setProperty('--accent-ink', active.ink);
+          root.style.setProperty('--accent-vivid', active.vivid);
+          root.style.setProperty('--accent-tint', active.tint);
+
+          dialSvg.style.transform = `rotate(${-activeIndex * 60}deg)`;
+          dialSvg.querySelectorAll('path[data-dial-idx]').forEach((p) => {
+            p.setAttribute(
+              'fill-opacity',
+              Number(p.getAttribute('data-dial-idx')) === activeIndex ? '1' : '0.28',
+            );
+          });
+          dialHub.innerHTML = glyphSVG(active.shape, active.vivid, 22);
+
+          wheelDescEl.textContent = active.descriptor;
+          artworkWordEl.textContent = active.phrase;
+          orbitRingEl.setAttribute('stroke', active.vivid);
+          cornerDynamicEl.style.background = active.vivid;
+          eichiStrokeEl.setAttribute('stroke', active.ink);
+          updateMailtoLinks(active.phrase);
+
+          const len = CONCEPTS.length;
+          wheelItemsEl.querySelectorAll('.wheel-item').forEach((btn) => {
+            const idx = Number(btn.dataset.drumIdx);
+            let offset = idx - activeIndex;
+            if (offset > len / 2) offset -= len;
+            if (offset < -len / 2) offset += len;
+
+            const isCenter = offset === 0;
+            const yPx = offset * 44;
+            const scale = isCenter ? 1 : Math.abs(offset) === 1 ? 0.84 : 0.68;
+            const rotX = offset * -28;
+            const opacity = isCenter ? 1 : Math.abs(offset) === 1 ? 0.48 : Math.abs(offset) <= 2 ? 0.14 : 0;
+
+            btn.setAttribute('data-offset', String(offset));
+            btn.style.transform = `translateY(${yPx}px) scale(${scale}) rotateX(${rotX}deg)`;
+            btn.style.opacity = String(opacity);
+            btn.style.color = isCenter ? active.ink : '#141413';
+            btn.style.pointerEvents = Math.abs(offset) <= 2 ? 'auto' : 'none';
+            if (isCenter) {
+              btn.setAttribute('aria-current', 'true');
+            } else {
+              btn.removeAttribute('aria-current');
+            }
+            const counter = btn.querySelector('.wheel-counter');
+            counter.textContent = isCenter ? `0${activeIndex + 1}/0${len}` : '';
+            counter.style.color = active.ink;
+          });
+
+          segmentsEl.querySelectorAll('.segment-btn').forEach((btn) => {
+            const idx = Number(btn.dataset.wheelIdx);
+            const selected = idx === activeIndex;
+            btn.setAttribute('aria-pressed', String(selected));
+            const swatch = btn.querySelector('.segment-swatch');
+            if (selected) {
+              btn.style.backgroundColor = CONCEPTS[idx].ink;
+              btn.style.color = '#FFFFFF';
+              swatch.style.backgroundColor = '#FFFFFF';
+            } else {
+              btn.style.backgroundColor = '';
+              btn.style.color = '';
+              swatch.style.backgroundColor = CONCEPTS[idx].vivid;
+            }
+          });
+        }
+
+        function setActive(index) {
+          activeIndex = wrapIndex(index, CONCEPTS.length);
+          renderWheel();
+        }
+
+        function startTimer() {
+          stopTimer();
+          if (isPlaying) {
+            intervalId = window.setInterval(() => {
+              setActive(activeIndex + 1);
+            }, 2600);
+          }
+        }
+
+        function stopTimer() {
+          if (intervalId !== null) {
+            window.clearInterval(intervalId);
+            intervalId = null;
+          }
+        }
+
+        function updatePlayButtons() {
+          document.querySelectorAll('.js-play-btn').forEach((btn) => {
+            btn.textContent = isPlaying ? '❚❚' : '▶';
+            btn.setAttribute(
+              'aria-label',
+              isPlaying ? 'Pausar roda giratòria' : 'Reprendre roda giratòria',
+            );
+          });
+        }
+
+        document.querySelectorAll('.js-prev-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            setActive(activeIndex - 1);
+            if (isPlaying) startTimer();
+          });
+        });
+
+        document.querySelectorAll('.js-next-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            setActive(activeIndex + 1);
+            if (isPlaying) startTimer();
+          });
+        });
+
+        document.querySelectorAll('.js-play-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            updatePlayButtons();
+            if (isPlaying) startTimer();
+            else stopTimer();
+          });
+        });
+
+        /* Render Projects with Real Downloaded Logos & Paths */
+        const projectsGrid = document.getElementById('projects-grid');
+
+        function renderProjects() {
+          const filtered =
+            activeCategory === 'tots'
+              ? PROJECTS
+              : PROJECTS.filter((p) => p.category === activeCategory);
+
+          projectsGrid.innerHTML = filtered
+            .map(
+              (p) => `
+            <article class="project-card">
+              <div>
+                <div class="project-top">
+                  <div class="project-logo-box">
+                    <img
+                      class="project-logo-img"
+                      src="${p.logoPath}"
+                      alt="Logotip de ${p.name}"
+                      referrerpolicy="no-referrer"
+                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    />
+                    <div class="project-logo-fallback" style="display:none; background:${p.accent}">
+                      ${p.name.charAt(0)}
+                    </div>
+                  </div>
+                  <div>
+                    <div class="project-meta">${p.categoryLabel}</div>
+                    <h3 class="project-name">${p.name}</h3>
+                  </div>
+                </div>
+                <p class="project-desc" style="margin-top:14px">${p.description}</p>
+              </div>
+
+              <div class="project-footer">
+                <span class="logo-route" title="Ruta del logotip">${p.logoPath}</span>
+                <div class="project-links">
+                  ${
+                    p.liveUrl
+                      ? `<a class="project-link" href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" style="color:${p.accent}">${p.liveLabel} ↗</a>`
+                      : ''
+                  }
+                  <a class="project-link" href="${p.repoUrl}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                </div>
+              </div>
+            </article>`,
+            )
+            .join('');
+        }
+
+        document.querySelectorAll('.filter-tab').forEach((tab) => {
+          tab.addEventListener('click', () => {
+            activeCategory = tab.dataset.category;
+            document.querySelectorAll('.filter-tab').forEach((t) => {
+              t.setAttribute('aria-pressed', String(t === tab));
+            });
+            renderProjects();
+          });
+        });
+
+        /* Render Pillars & Marquee */
+        const pillarsGrid = document.getElementById('pillars-grid');
+        pillarsGrid.innerHTML = PILLARS.map(
+          (p) => `
+          <button type="button" class="pillar-card" data-pillar-concept="${p.conceptIdx}">
+            <div>
+              <div class="pillar-top">
+                <span class="pillar-num">${p.num}</span>
+                ${glyphSVG(p.shape, p.color, 22)}
+              </div>
+              <h2 class="pillar-title">${p.title}</h2>
+              <p class="pillar-desc">${p.desc}</p>
+            </div>
+          </button>`,
+        ).join('');
+
+        pillarsGrid.querySelectorAll('.pillar-card').forEach((card) => {
+          card.addEventListener('click', () => {
+            setActive(Number(card.dataset.pillarConcept));
+            document.getElementById('roda').scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+
+        const marqueeTrack = document.getElementById('marquee-track');
+        const marqueeList = [...CONCEPTS, ...CONCEPTS, ...CONCEPTS];
+        marqueeTrack.innerHTML = marqueeList
+          .map(
+            (c) => `
+          <div class="marquee-item">
+            ${glyphSVG(c.shape, c.vivid, 16)}
+            <span class="marquee-word">${c.phrase}</span>
+            <span class="marquee-brand">/mehillana</span>
+          </div>`,
+          )
+          .join('');
+
+        /* titol.png handling: keeps empty space ready if missing */
+        const titolImg = document.getElementById('titol-img');
+        const titolGuide = document.getElementById('titol-guide');
+        titolImg.addEventListener('error', () => {
+          titolImg.style.display = 'none';
+          titolGuide.style.opacity = '1';
+        });
+
+        /* Contact Modal */
+        /* Pre-filled Mailto Template for Parlem-ne & Contact Links */
+        function buildMailtoUrl(conceptPhrase) {
+          const email = 'Neeeeeennnn@gmail.com';
+          const subject = `Hola @eichi — Proposta per a /mehillana (${conceptPhrase})`;
+          const body = [
+            'Hola Etienne (@eichi),',
+            '',
+            `T'escric des del teu portfoli /mehillana perquè m'agradaria parlar sobre un projecte vinculat a "${conceptPhrase}".`,
+            '',
+            'Nom o col·lectiu: ',
+            'Idea o consulta: ',
+            '',
+            'Salutacions,',
+          ].join('\n');
+          return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function updateMailtoLinks(conceptPhrase) {
+          const href = buildMailtoUrl(conceptPhrase);
+          ['open-contact-top', 'open-contact-hero', 'open-contact-footer'].forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) el.setAttribute('href', href);
+          });
+        }
+
+        /* Render Tech Stack (HTML, CSS, JS, Java, Python, Chaufa, C, GitHub) */
+        const stackGrid = document.getElementById('stack-grid');
+        stackGrid.innerHTML = STACK_ITEMS.map(
+          (item) => `
+          <article class="stack-card">
+            <div class="stack-head">
+              <h3 style="margin:0; font-size:1.05rem; font-weight:800; letter-spacing:-0.02em; color:${item.color}">
+                ${item.name}
+              </h3>
+              <span class="stack-code">${item.code}</span>
+            </div>
+            <p class="project-desc" style="font-size:0.84rem">${item.desc}</p>
+          </article>`,
+        ).join('');
+
+        /* Render History Timeline (#historia) */
+        const historyGrid = document.getElementById('history-grid');
+        if (historyGrid) {
+          historyGrid.innerHTML = HISTORY_MILESTONES.map(
+            (m) => `
+            <article class="history-card${m.featured ? ' history-card--featured' : ''}">
+              <div>
+                <div class="history-top">
+                  <span class="history-year" style="color:${m.color}">${m.period}</span>
+                  ${glyphSVG(m.shape, m.color, 20)}
+                </div>
+                <h3 class="history-title">${m.title}</h3>
+                <p class="history-desc">${m.desc}</p>
+              </div>
+              ${
+                m.featured
+                  ? `<a class="history-cta" href="#projectes">Explorar els projectes →</a>`
+                  : ''
+              }
+            </article>`,
+          ).join('');
+        }
+
+        /* Award poster fallback if missing */
+        const awardImg = document.getElementById('award-img');
+        const awardGuide = document.getElementById('award-guide');
+        if (awardImg && awardGuide) {
+          awardImg.addEventListener('error', () => {
+            awardImg.style.display = 'none';
+            awardGuide.style.opacity = '1';
+          });
+        }
+
+        /* Illustration Rotating Wheel (ilustracio1.png .. ilustracio12.png) */
+        const ILLUSTRATIONS = [
+          {
+            index: 1,
+            path: './ilustracio1.png',
+            title: 'Mapa digital personal',
+            caption: 'Cartografies afectives, coordenades i territori viscut.',
+            color: '#8B5CF6',
+          },
+          {
+            index: 2,
+            path: './ilustracio2.png',
+            title: 'Lavender i Farmia',
+            caption: 'Temps quotidià, natura i relats d’hort i muntanya.',
+            color: '#10B981',
+          },
+          {
+            index: 3,
+            path: './ilustracio3.png',
+            title: 'Taula de fusió',
+            caption: 'Sushi, yucca fregida i trobades entre cuines.',
+            color: '#F97316',
+          },
+          {
+            index: 4,
+            path: './ilustracio4.png',
+            title: 'Història i música',
+            caption: 'Cronologies, escolta atenta i memòria sonora.',
+            color: '#2563EB',
+          },
+          {
+            index: 5,
+            path: './ilustracio5.png',
+            title: 'Cosmos català',
+            caption: 'Llengua pròpia com a espai d’imaginació contemporània.',
+            color: '#E63946',
+          },
+          {
+            index: 6,
+            path: './ilustracio6.png',
+            title: 'Eichi × Mona',
+            caption: 'Traç personal, identitat visual i experimentació gràfica.',
+            color: '#DB2777',
+          },
+          {
+            index: 7,
+            path: './ilustracio7.png',
+            title: 'Quadern d’estudi',
+            caption: 'Esbossos, notes de camp i nous mons en construcció.',
+            color: '#6D28D9',
+          },
+          {
+            index: 8,
+            path: './ilustracio8.png',
+            title: 'Cartell Petits Camaleons',
+            caption: 'Proposta guanyadora per al festival familiar de Sant Cugat.',
+            color: '#059669',
+          },
+          {
+            index: 9,
+            path: './ilustracio9.png',
+            title: 'Espai Memòria',
+            caption: 'Refugi digital privat, calma i escriptura offline-first.',
+            color: '#D97706',
+          },
+          {
+            index: 10,
+            path: './ilustracio10.png',
+            title: 'La Conferència — vinyetes',
+            caption: 'Traç satíric en català sobre l’actualitat i els seus discursos.',
+            color: '#C82333',
+          },
+          {
+            index: 11,
+            path: './ilustracio11.png',
+            title: 'Identitat per sobreviure',
+            caption: 'Cos, paraula pròpia i imaginari no binari sense etiquetes tancades.',
+            color: '#9333EA',
+          },
+          {
+            index: 12,
+            path: './ilustracio12.png',
+            title: 'Quadern de Sant Cugat',
+            caption: 'Carrers, boscos de Collserola i apunts del territori viscut.',
+            color: '#1D4ED8',
+          },
+        ];
+
+        let illusIdx = 0;
+        let illusPlaying = true;
+        let illusTimer = null;
+
+        const illusDialSvg = document.getElementById('illus-dial-svg');
+        const illusDialCenter = document.getElementById('illus-dial-center');
+        const illusStepsEl = document.getElementById('illus-steps');
+        const illusRoutesGridEl = document.getElementById('illus-routes-grid');
+        const illusImg = document.getElementById('illus-img');
+        const illusGuide = document.getElementById('illus-guide');
+        const illusGuidePath = document.getElementById('illus-guide-path');
+        const illusGuideTitle = document.getElementById('illus-guide-title');
+        const illusRouteBadge = document.getElementById('illus-route-badge');
+        const illusActiveFile = document.getElementById('illus-active-file');
+        const illusActiveTitle = document.getElementById('illus-active-title');
+        const illusActiveCaption = document.getElementById('illus-active-caption');
+        const illusStampNum = document.getElementById('illus-stamp-num');
+        const illusPlayBtn = document.getElementById('illus-play');
+
+        function pad2(n) {
+          return String(n).padStart(2, '0');
+        }
+
+        function buildIllusDial() {
+          const total = ILLUSTRATIONS.length;
+          const stepDeg = 360 / total;
+          let paths = `<circle cx="60" cy="60" r="54" fill="none" stroke="#141413" stroke-opacity="0.1" stroke-width="1.5" stroke-dasharray="4 4"/>`;
+          ILLUSTRATIONS.forEach((item, idx) => {
+            const a1 = ((idx * stepDeg - stepDeg / 2) * Math.PI) / 180;
+            const a2 = ((idx * stepDeg + stepDeg / 2) * Math.PI) / 180;
+            const ro = 49;
+            const ri = 28;
+            const x1 = 60 + ro * Math.cos(a1);
+            const y1 = 60 + ro * Math.sin(a1);
+            const x2 = 60 + ro * Math.cos(a2);
+            const y2 = 60 + ro * Math.sin(a2);
+            const x3 = 60 + ri * Math.cos(a2);
+            const y3 = 60 + ri * Math.sin(a2);
+            const x4 = 60 + ri * Math.cos(a1);
+            const y4 = 60 + ri * Math.sin(a1);
+            paths += `<path data-illus-slice="${idx}" d="M ${x1} ${y1} A ${ro} ${ro} 0 0 1 ${x2} ${y2} L ${x3} ${y3} A ${ri} ${ri} 0 0 0 ${x4} ${y4} Z" fill="${item.color}" fill-opacity="0.28" stroke="#FFFFFF" stroke-width="1.6"/>`;
+          });
+          illusDialSvg.innerHTML = paths;
+
+          illusStepsEl.innerHTML = ILLUSTRATIONS.map(
+            (item, idx) => `
+            <button type="button" class="illus-step-btn" data-illus-idx="${idx}" aria-pressed="${idx === 0}">
+              ${pad2(item.index)}
+            </button>`,
+          ).join('');
+
+          illusStepsEl.querySelectorAll('.illus-step-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              setIllus(Number(btn.dataset.illusIdx));
+              if (illusPlaying) startIllusTimer();
+            });
+          });
+
+          illusRoutesGridEl.innerHTML = ILLUSTRATIONS.map(
+            (item, idx) => `
+            <button type="button" class="illus-route-card" data-route-idx="${idx}" aria-pressed="${idx === 0}">
+              <span class="illus-route-path">${item.path}</span>
+              <span class="illus-route-name">${pad2(item.index)} · ${item.title}</span>
+            </button>`,
+          ).join('');
+
+          illusRoutesGridEl.querySelectorAll('.illus-route-card').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              setIllus(Number(btn.dataset.routeIdx));
+              if (illusPlaying) startIllusTimer();
+            });
+          });
+        }
+
+        function renderIllus() {
+          const total = ILLUSTRATIONS.length;
+          const item = ILLUSTRATIONS[illusIdx];
+          const stepDeg = 360 / total;
+          const counterText = `${pad2(item.index)}/${pad2(total)}`;
+          illusDialSvg.style.transform = `rotate(${-illusIdx * stepDeg}deg)`;
+          illusDialSvg.querySelectorAll('path[data-illus-slice]').forEach((p) => {
+            p.setAttribute(
+              'fill-opacity',
+              Number(p.getAttribute('data-illus-slice')) === illusIdx ? '1' : '0.28',
+            );
+          });
+          illusDialCenter.textContent = counterText;
+          illusDialCenter.style.color = item.color;
+
+          illusRouteBadge.textContent = item.path;
+          illusActiveFile.textContent = item.path;
+          illusActiveTitle.textContent = item.title;
+          illusActiveCaption.textContent = item.caption;
+          illusGuidePath.textContent = item.path;
+          illusGuideTitle.textContent = item.title;
+          illusStampNum.textContent = counterText;
+
+          illusImg.style.display = 'block';
+          illusImg.src = item.path;
+          illusImg.alt = `Dibuix ${item.index}: ${item.title}`;
+
+          illusStepsEl.querySelectorAll('.illus-step-btn').forEach((btn) => {
+            const idx = Number(btn.dataset.illusIdx);
+            const selected = idx === illusIdx;
+            btn.setAttribute('aria-pressed', String(selected));
+            btn.style.backgroundColor = selected ? ILLUSTRATIONS[idx].color : '';
+            btn.style.color = selected ? '#FFFFFF' : '';
+          });
+
+          illusRoutesGridEl.querySelectorAll('.illus-route-card').forEach((btn) => {
+            const idx = Number(btn.dataset.routeIdx);
+            btn.setAttribute('aria-pressed', String(idx === illusIdx));
+          });
+        }
+
+        function setIllus(idx) {
+          illusIdx = wrapIndex(idx, ILLUSTRATIONS.length);
+          renderIllus();
+        }
+
+        function startIllusTimer() {
+          if (illusTimer !== null) {
+            window.clearInterval(illusTimer);
+          }
+          if (illusPlaying) {
+            illusTimer = window.setInterval(() => {
+              setIllus(illusIdx + 1);
+            }, 3400);
+          }
+        }
+
+        illusImg.addEventListener('error', () => {
+          illusImg.style.display = 'none';
+          illusGuide.style.opacity = '1';
+        });
+
+        document.getElementById('illus-prev').addEventListener('click', () => {
+          setIllus(illusIdx - 1);
+          if (illusPlaying) startIllusTimer();
+        });
+
+        document.getElementById('illus-next').addEventListener('click', () => {
+          setIllus(illusIdx + 1);
+          if (illusPlaying) startIllusTimer();
+        });
+
+        illusPlayBtn.addEventListener('click', () => {
+          illusPlaying = !illusPlaying;
+          illusPlayBtn.textContent = illusPlaying ? '❚❚' : '▶';
+          illusPlayBtn.setAttribute(
+            'aria-label',
+            illusPlaying ? 'Pausar rodeta de dibuixos' : 'Reprendre rodeta de dibuixos',
+          );
+          if (illusPlaying) startIllusTimer();
+          else if (illusTimer !== null) {
+            window.clearInterval(illusTimer);
+            illusTimer = null;
+          }
+        });
+
+        buildDial();
+        buildSegments();
+        buildWheelNodes();
+        renderWheel();
+        renderProjects();
+        buildIllusDial();
+        renderIllus();
+        startTimer();
+        startIllusTimer();
+      })();
+    </script>
+  </body>
+</html>
